@@ -1,0 +1,150 @@
+{
+  "courses": {
+    "Torrey Pines 1": {
+      "image": "torrey-pines-1",
+      "par": 72,
+      "yardage": 7000,
+      "holes": {
+        "1": {
+          "par": 4,
+          "yardage": 400,
+          "latitude": 101,
+          "longitude": 102
+        },
+        "2": {
+          "par": 4,
+          "yardage": 420,
+          "latitude": 101,
+          "longitude": 102
+        },
+        "3": {
+          "par": 3,
+          "yardage": 200,
+          "latitude": 101,
+          "longitude": 102
+        },
+        "4": {
+          "par": 5,
+          "yardage": 550,
+          "latitude": 101,
+          "longitude": 102
+        },
+        "5": {
+          "par": 4,
+          "yardage": 420,
+          "latitude": 101,
+          "longitude": 102
+        },
+        "6": {
+          "par": 3,
+          "yardage": 200,
+          "latitude": 101,
+          "longitude": 102
+        },
+        "7": {
+          "par": 5,
+          "yardage": 550,
+          "latitude": 101,
+          "longitude": 102
+        },
+        "8": {
+          "par": 4,
+          "yardage": 420,
+          "latitude": 101,
+          "longitude": 102
+        },
+        "9": {
+          "par": 3,
+          "yardage": 200,
+          "latitude": 101,
+          "longitude": 102
+        },
+        "10": {
+          "par": 4,
+          "yardage": 400,
+          "latitude": 101,
+          "longitude": 102
+        },
+        "11": {
+          "par": 4,
+          "yardage": 420,
+          "latitude": 101,
+          "longitude": 102
+        }
+      }
+    },
+    "Torrey Pines 2": {
+      "image": "torrey-pines-2",
+      "par": 72,
+      "yardage": 7000,
+      "holes": {
+        "1": {
+          "par": 4,
+          "yardage": 400,
+          "latitude": 101,
+          "longitude": 102
+        },
+        "2": {
+          "par": 4,
+          "yardage": 420,
+          "latitude": 101,
+          "longitude": 102
+        },
+        "3": {
+          "par": 3,
+          "yardage": 200,
+          "latitude": 101,
+          "longitude": 102
+        },
+        "4": {
+          "par": 5,
+          "yardage": 550,
+          "latitude": 101,
+          "longitude": 102
+        },
+        "5": {
+          "par": 4,
+          "yardage": 420,
+          "latitude": 101,
+          "longitude": 102
+        },
+        "6": {
+          "par": 3,
+          "yardage": 200,
+          "latitude": 101,
+          "longitude": 102
+        },
+        "7": {
+          "par": 5,
+          "yardage": 550,
+          "latitude": 101,
+          "longitude": 102
+        },
+        "8": {
+          "par": 4,
+          "yardage": 420,
+          "latitude": 101,
+          "longitude": 102
+        },
+        "9": {
+          "par": 3,
+          "yardage": 200,
+          "latitude": 101,
+          "longitude": 102
+        },
+        "10": {
+          "par": 4,
+          "yardage": 400,
+          "latitude": 101,
+          "longitude": 102
+        },
+        "11": {
+          "par": 4,
+          "yardage": 420,
+          "latitude": 101,
+          "longitude": 102
+        }
+      }
+    }
+  }
+}

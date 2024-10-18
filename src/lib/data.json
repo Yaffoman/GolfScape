@@ -3,73 +3,317 @@
     "Torrey Pines 1": {
       "image": "torrey-pines-1",
       "par": 72,
-      "yardage": 7000,
+      "yardage": {
+        "black": 7000,
+        "brown": 6500,
+        "green": 6000,
+        "white": 5500,
+        "yellow": 5000
+      },
       "holes": {
         "1": {
           "par": 4,
-          "yardage": 400,
-          "latitude": 101,
-          "longitude": 102
+          "yardage": {
+            "black": 451,
+            "brown": 434,
+            "green": 419,
+            "white": 409,
+            "yellow": 350
+          },
+          "latitude": [
+            -117.245751,
+            -117.248181,
+            -117.250229
+          ],
+          "longitude": [
+            32.904263,
+            32.903545,
+            32.903068
+          ]
         },
         "2": {
           "par": 4,
-          "yardage": 420,
-          "latitude": 101,
-          "longitude": 102
+          "yardage": {
+            "black": 389,
+            "brown": 361,
+            "green": 344,
+            "white": 323,
+            "yellow": 283
+          },
+          "latitude": [
+            -117.250149,
+            -117.249812,
+            -117.249988
+          ],
+          "longitude": [
+            32.902560,
+            32.900725,
+            32.899746
+          ]
         },
         "3": {
           "par": 3,
-          "yardage": 200,
-          "latitude": 101,
-          "longitude": 102
+          "yardage": {
+            "black": 201,
+            "brown": 159,
+            "green": 146,
+            "white": 142,
+            "yellow": 106
+          },
+          "latitude": [
+            -117.250003,
+            -117.250631
+          ],
+          "longitude": [
+            32.899272,
+            32.897957
+          ]
         },
         "4": {
-          "par": 5,
-          "yardage": 550,
-          "latitude": 101,
-          "longitude": 102
+          "par": 4,
+          "yardage": {
+            "black": 490,
+            "brown": 462,
+            "green": 420,
+            "white": 384,
+            "yellow": 353
+          },
+          "latitude": [
+            -117.251400,
+            -117.251706,
+            -117.251864
+          ],
+          "longitude": [
+            32.898259,
+            32.900576,
+            32.902056
+          ]
         },
         "5": {
           "par": 4,
-          "yardage": 420,
-          "latitude": 101,
-          "longitude": 102
+          "yardage": {
+            "black": 454,
+            "brown": 404,
+            "green": 393,
+            "white": 382,
+            "yellow": 320
+          },
+          "latitude": [
+            -117.251195,
+            -117.250790,
+            -117.250786
+          ],
+          "longitude": [
+            32.902245,
+            32.900435,
+            32.899155
+          ]
         },
         "6": {
-          "par": 3,
-          "yardage": 200,
-          "latitude": 101,
-          "longitude": 102
+          "par": 5,
+          "yardage": {
+            "black": 564,
+            "brown": 530,
+            "green": 505,
+            "white": 449,
+            "yellow": 431
+          },
+          "latitude": [
+            -117.249521,
+            -117.248423,
+            -117.246760
+          ],
+          "longitude": [
+            32.899698,
+            32.901295,
+            32.902330
+          ]
         },
         "7": {
-          "par": 5,
-          "yardage": 550,
-          "latitude": 101,
-          "longitude": 102
+          "par": 4,
+          "yardage": {
+            "black": 462,
+            "brown": 443,
+            "green": 424,
+            "white": 387,
+            "yellow": 378
+          },
+          "latitude": [
+            -117.246120,
+            -117.246400,
+            -117.247157
+          ],
+          "longitude": [
+            32.902899,
+            32.900420,
+            32.899376
+          ]
         },
         "8": {
-          "par": 4,
-          "yardage": 420,
-          "latitude": 101,
-          "longitude": 102
+          "par": 3,
+          "yardage": {
+            "black": 177,
+            "brown": 161,
+            "green": 149,
+            "white": 139,
+            "yellow": 90
+          },
+          "latitude": [
+            -117.247016,
+            -117.245612
+          ],
+          "longitude": [
+            32.899060,
+            32.899415
+          ]
         },
         "9": {
-          "par": 3,
-          "yardage": 200,
-          "latitude": 101,
-          "longitude": 102
+          "par": 5,
+          "yardage": {
+            "black": 615,
+            "brown": 535,
+            "green": 514,
+            "white": 457,
+            "yellow": 432
+          },
+          "latitude": [
+            -117.244425,
+            -117.244104,
+            -117.243967
+          ],
+          "longitude": [
+            32.900003,
+            32.896530,
+            32.895125
+          ]
         },
         "10": {
           "par": 4,
-          "yardage": 400,
-          "latitude": 101,
-          "longitude": 102
+          "yardage": {
+            "black": 454,
+            "brown": 371,
+            "green": 352,
+            "white": 308,
+            "yellow": 294
+          },
+          "latitude": [
+            -117.243363,
+            -117.243589,
+            -117.243449
+          ],
+          "longitude": [
+            32.894879,
+            32.893048,
+            32.891994
+          ]
         },
         "11": {
+          "par": 3,
+          "yardage": {
+            "black": 225,
+            "brown": 202,
+            "green": 190,
+            "white": 171,
+            "yellow": 104
+          },
+          "latitude": [
+            -117.243328,
+            -117.244995
+          ],
+          "longitude": [
+            32.891250,
+            32.890732
+          ]
+        },
+        "12": {
           "par": 4,
-          "yardage": 420,
-          "latitude": 101,
-          "longitude": 102
+          "yardage": {
+            "black": 505,
+            "brown": 458,
+            "green": 444,
+            "white": 411,
+            "yellow": 370
+          },
+          "latitude": [
+            -117.245614,
+            -117.248011
+          ],
+          "longitude": [
+            32.890347,
+            32.891140
+          ]
+        },
+        "13": {
+          "par": 3,
+          "yardage": {
+            "black": 225,
+            "brown": 202,
+            "green": 190,
+            "white": 171,
+            "yellow": 104
+          },
+          "latitude": [],
+          "longitude": []
+        },
+        "14": {
+          "par": 3,
+          "yardage": {
+            "black": 225,
+            "brown": 202,
+            "green": 190,
+            "white": 171,
+            "yellow": 104
+          },
+          "latitude": [],
+          "longitude": []
+        },
+        "15": {
+          "par": 3,
+          "yardage": {
+            "black": 225,
+            "brown": 202,
+            "green": 190,
+            "white": 171,
+            "yellow": 104
+          },
+          "latitude": [],
+          "longitude": []
+        },
+        "16": {
+          "par": 3,
+          "yardage": {
+            "black": 225,
+            "brown": 202,
+            "green": 190,
+            "white": 171,
+            "yellow": 104
+          },
+          "latitude": [],
+          "longitude": []
+        },
+        "17": {
+          "par": 3,
+          "yardage": {
+            "black": 225,
+            "brown": 202,
+            "green": 190,
+            "white": 171,
+            "yellow": 104
+          },
+          "latitude": [],
+          "longitude": []
+        },
+        "18": {
+          "par": 3,
+          "yardage": {
+            "black": 225,
+            "brown": 202,
+            "green": 190,
+            "white": 171,
+            "yellow": 104
+          },
+          "latitude": [],
+          "longitude": []
         }
       }
     },

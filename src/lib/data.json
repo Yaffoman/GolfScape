@@ -277,56 +277,94 @@
           "white": 359,
           "yellow": 277
         },
-        "latitude": [],
-        "longitude": []
+        "latitude": [
+          32.891567,
+          32.893556,
+          32.894483
+        ],
+        "longitude": [
+          -117.243979,
+          -117.244873,
+          -117.245643
+        ]
       },
       "15": {
-        "par": 3,
+        "par": 4,
         "yardage": {
-          "black": 225,
-          "brown": 202,
-          "green": 190,
-          "white": 171,
-          "yellow": 104
+          "black": 517,
+          "brown": 394,
+          "green": 355,
+          "white": 339,
+          "yellow": 276
         },
-        "latitude": [],
-        "longitude": []
+        "latitude": [
+          32.894387,
+          32.896012,
+          32.897059
+        ],
+        "longitude": [
+          -117.244394,
+          -117.244806,
+          -117.245112
+        ]
       },
       "16": {
         "par": 3,
         "yardage": {
-          "black": 225,
-          "brown": 202,
-          "green": 190,
-          "white": 171,
-          "yellow": 104
+          "black": 227,
+          "brown": 204,
+          "green": 183,
+          "white": 151,
+          "yellow": 142
         },
-        "latitude": [],
-        "longitude": []
+        "latitude": [
+          32.896984,
+          32.895908
+        ],
+        "longitude": [
+          -117.245799,
+          -117.247242
+        ]
       },
       "17": {
         "par": 3,
         "yardage": {
-          "black": 225,
-          "brown": 202,
-          "green": 190,
-          "white": 171,
-          "yellow": 104
+          "black": 443,
+          "brown": 422,
+          "green": 398,
+          "white": 375,
+          "yellow": 346
         },
-        "latitude": [],
-        "longitude": []
+        "latitude": [
+          32.896476,
+          32.897863,
+          32.898871
+        ],
+        "longitude": [
+          -117.247365,
+          -117.246222,
+          -117.245243
+        ]
       },
       "18": {
-        "par": 3,
+        "par": 5,
         "yardage": {
-          "black": 225,
-          "brown": 202,
-          "green": 190,
-          "white": 171,
-          "yellow": 104
+          "black": 570,
+          "brown": 522,
+          "green": 491,
+          "white": 473,
+          "yellow": 414
         },
-        "latitude": [],
-        "longitude": []
+        "latitude": [
+          32.899399,
+          32.901322,
+          32.903178
+        ],
+        "longitude": [
+          -117.244808,
+          -117.245316,
+          -117.245407
+        ]
       }
     }
   },

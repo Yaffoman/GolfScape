@@ -1,10 +1,11 @@
 {
   "courses": [
     {
-      "name": "Torrey Pines South Course",
+      "name": "Torrey Pines South",
       "image": "Torrey-Pines-South.jpg",
-      "description": "Torrey Pines Golf Course sits on the coastal cliffs overlooking the Pacific Ocean and is recognized as the premier municipal golf course owned and operated by a city. It is named after the Torrey Pine, a rare tree that grows in the wild only along this local stretch of the coastline in San Diego County and on Santa Rosa Island.",
+      "description": "Torrey Pines Golf Course sits on the coastal cliffs overlooking the Pacific Ocean and is recognized as the premier municipal golf course owned and operated by a city. It is named after the Torrey Pine, a rare tree that grows in the wild only along this local stretch of the coastline in San Diego County and on Santa Rosa Island. The South Course is the more challenging of the two available courses and was the host of the 2008 U.S. Open!",
       "par": 72,
+      "cost": "$200",
       "latitude": 32.904046,
       "longitude": -117.246534,
       "yardage": {
@@ -370,10 +371,11 @@
       }
     },
     {
-      "name": "Torrey Pines North Course",
+      "name": "Torrey Pines North",
       "image": "Torrey-Pines-North-2.jpg",
-      "description": "Torrey Pines Golf Course sits on the coastal cliffs overlooking the Pacific Ocean and is recognized as the premier municipal golf course owned and operated by a city. It is named after the Torrey Pine, a rare tree that grows in the wild only along this local stretch of the coastline in San Diego County and on Santa Rosa Island.",
+      "description": "The North Course at Torrey Pines is known as the more friendly of the two available but don't let that fool you. It offers both stunning views of the Pacific Ocean over Blacks Beach and provides a serious challenge to any level of golfer.",
       "par": 72,
+      "cost": "$200",
       "latitude": 32.904046,
       "longitude": -117.246534,
       "yardage": {
@@ -743,6 +745,7 @@
       "image": "Aviara-Golf-Club.avif",
       "description": "Ever since its 1991 debut, Aviara Golf Club, part of the world-class Park Hyatt resort, has been known as one of San Diego County’s best-conditioned courses and the only course in the area designed by the legendary Arnold Palmer. The upscale resort course routed through hilly and canyon terrain and features beautiful scenic holes with native wildflowers, water features, strategic bunkering, and fun green complexes.",
       "par": 72,
+      "cost": "$200",
       "latitude": 32.904046,
       "longitude": -117.246534,
       "yardage": {

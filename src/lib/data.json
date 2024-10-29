@@ -1,6 +1,7 @@
 {
-  "courses": {
-    "Torrey Pines 1": {
+  "courses": [
+    {
+      "name": "Torry Pines South Course",
       "image": "torrey-pines-1",
       "par": 72,
       "latitude": 32.904046,
@@ -266,179 +267,106 @@
             -117.247171,
             -117.245101
           ]
+        },
+        "14": {
+          "par": 4,
+          "yardage": {
+            "black": 437,
+            "brown": 414,
+            "green": 394,
+            "white": 359,
+            "yellow": 277
+          },
+          "latitude": [
+            32.891567,
+            32.893556,
+            32.894483
+          ],
+          "longitude": [
+            -117.243979,
+            -117.244873,
+            -117.245643
+          ]
+        },
+        "15": {
+          "par": 4,
+          "yardage": {
+            "black": 517,
+            "brown": 394,
+            "green": 355,
+            "white": 339,
+            "yellow": 276
+          },
+          "latitude": [
+            32.894387,
+            32.896012,
+            32.897059
+          ],
+          "longitude": [
+            -117.244394,
+            -117.244806,
+            -117.245112
+          ]
+        },
+        "16": {
+          "par": 3,
+          "yardage": {
+            "black": 227,
+            "brown": 204,
+            "green": 183,
+            "white": 151,
+            "yellow": 142
+          },
+          "latitude": [
+            32.896984,
+            32.895908
+          ],
+          "longitude": [
+            -117.245799,
+            -117.247242
+          ]
+        },
+        "17": {
+          "par": 3,
+          "yardage": {
+            "black": 443,
+            "brown": 422,
+            "green": 398,
+            "white": 375,
+            "yellow": 346
+          },
+          "latitude": [
+            32.896476,
+            32.897863,
+            32.898871
+          ],
+          "longitude": [
+            -117.247365,
+            -117.246222,
+            -117.245243
+          ]
+        },
+        "18": {
+          "par": 5,
+          "yardage": {
+            "black": 570,
+            "brown": 522,
+            "green": 491,
+            "white": 473,
+            "yellow": 414
+          },
+          "latitude": [
+            32.899399,
+            32.901322,
+            32.903178
+          ],
+          "longitude": [
+            -117.244808,
+            -117.245316,
+            -117.245407
+          ]
         }
-      },
-      "14": {
-        "par": 4,
-        "yardage": {
-          "black": 437,
-          "brown": 414,
-          "green": 394,
-          "white": 359,
-          "yellow": 277
-        },
-        "latitude": [
-          32.891567,
-          32.893556,
-          32.894483
-        ],
-        "longitude": [
-          -117.243979,
-          -117.244873,
-          -117.245643
-        ]
-      },
-      "15": {
-        "par": 4,
-        "yardage": {
-          "black": 517,
-          "brown": 394,
-          "green": 355,
-          "white": 339,
-          "yellow": 276
-        },
-        "latitude": [
-          32.894387,
-          32.896012,
-          32.897059
-        ],
-        "longitude": [
-          -117.244394,
-          -117.244806,
-          -117.245112
-        ]
-      },
-      "16": {
-        "par": 3,
-        "yardage": {
-          "black": 227,
-          "brown": 204,
-          "green": 183,
-          "white": 151,
-          "yellow": 142
-        },
-        "latitude": [
-          32.896984,
-          32.895908
-        ],
-        "longitude": [
-          -117.245799,
-          -117.247242
-        ]
-      },
-      "17": {
-        "par": 3,
-        "yardage": {
-          "black": 443,
-          "brown": 422,
-          "green": 398,
-          "white": 375,
-          "yellow": 346
-        },
-        "latitude": [
-          32.896476,
-          32.897863,
-          32.898871
-        ],
-        "longitude": [
-          -117.247365,
-          -117.246222,
-          -117.245243
-        ]
-      },
-      "18": {
-        "par": 5,
-        "yardage": {
-          "black": 570,
-          "brown": 522,
-          "green": 491,
-          "white": 473,
-          "yellow": 414
-        },
-        "latitude": [
-          32.899399,
-          32.901322,
-          32.903178
-        ],
-        "longitude": [
-          -117.244808,
-          -117.245316,
-          -117.245407
-        ]
       }
     }
-  },
-  "Torrey Pines 2": {
-    "image": "torrey-pines-2",
-    "par": 72,
-    "yardage": 7000,
-    "holes": {
-      "1": {
-        "par": 4,
-        "yardage": 400,
-        "latitude": 101,
-        "longitude": 102
-      },
-      "2": {
-        "par": 4,
-        "yardage": 420,
-        "latitude": 101,
-        "longitude": 102
-      },
-      "3": {
-        "par": 3,
-        "yardage": 200,
-        "latitude": 101,
-        "longitude": 102
-      },
-      "4": {
-        "par": 5,
-        "yardage": 550,
-        "latitude": 101,
-        "longitude": 102
-      },
-      "5": {
-        "par": 4,
-        "yardage": 420,
-        "latitude": 101,
-        "longitude": 102
-      },
-      "6": {
-        "par": 3,
-        "yardage": 200,
-        "latitude": 101,
-        "longitude": 102
-      },
-      "7": {
-        "par": 5,
-        "yardage": 550,
-        "latitude": 101,
-        "longitude": 102
-      },
-      "8": {
-        "par": 4,
-        "yardage": 420,
-        "latitude": 101,
-        "longitude": 102
-      },
-      "9": {
-        "par": 3,
-        "yardage": 200,
-        "latitude": 101,
-        "longitude": 102
-      },
-      "10": {
-        "par": 4,
-        "yardage": 400,
-        "latitude": 101,
-        "longitude": 102
-      },
-      "11": {
-        "par": 4,
-        "yardage": 420,
-        "latitude": 101,
-        "longitude": 102
-      }
-    }
-  }
+  ]
 }

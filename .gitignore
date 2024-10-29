@@ -131,6 +131,5 @@ dist
 .svelte-kit
 
 
-src/lib/images/
 
 .DS_Store

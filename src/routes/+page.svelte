@@ -1,6 +1,8 @@
 <script>
     import {onMount} from 'svelte';
   import { courseStore, selectCourse, selectHole } from '../lib/stores/courseStore';
+  import CourseOverview from '../lib/components/CourseOverview.svelte';
+  import IntroSection from '../lib/components/IntroSection.svelte';
     // const parser = new DOMParser();
 
     let Marker = null;
@@ -91,14 +93,17 @@
 
 
 </script>
+<IntroSection/>
+{#each $courseStore.courses as course}
+    <CourseOverview course={course}/>
+{/each}
 
-<div class="min-h-screen bg-base-200 p-10">
+<!-- <div class="min-h-screen bg-base-200 p-10">
     <div class="text-center">
         <p class="py-6">Explore golf courses in 3D realism and take a virtual tour of your favorite courses.</p>
     </div>
 
     {#if !$courseStore.selectedCourse}
-        <!-- Course Selection -->
         <div class="grid grid-cols-2">
             {#each $courseStore.courses as course}
                 <div class="card">
@@ -116,7 +121,6 @@
             {/each}
         </div>
     {:else if !$courseStore.selectedHole}
-        <!-- Hole Selection -->
         <div class="text-center">
             <h2 class="text-3xl">Selected Course: {$courseStore.selectedCourse}</h2>
             <p class="py-4">Select a hole to continue:</p>
@@ -129,7 +133,6 @@
             </div>
         </div>
     {:else}
-        <!-- Course Details Template -->
         <div class="text-center">
             <h2 class="text-3xl">Course: {$courseStore.selectedCourse}</h2>
             <p class="py-4">Hole {$courseStore.selectedHole}</p>
@@ -145,4 +148,4 @@
         </div>
     {/if}
     <div id="map_container" class="h-[500px]"></div>
-</div>
+</div> -->

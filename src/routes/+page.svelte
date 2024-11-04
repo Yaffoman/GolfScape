@@ -57,7 +57,7 @@
                 tilt: 67.5,
                 range: 1000
             },
-            durationMillis: 100
+            durationMillis: 3000
         });
 
         //     For each hole, add a marker
@@ -69,12 +69,7 @@
                     let holeMarker = new Marker({
                         position: {lat: holeData.latitude[0], lng: holeData.longitude[0]},
                         altitudeMode: 'RELATIVE_TO_GROUND',
-                        label:  {
-                            text: hole,            // Customize text
-                            color: "blue",         // Customize color
-                            fontWeight: "bold",    // Customize font weight
-                            fontSize: "24px",      // Customize font size
-                        },
+                        label: hole,
                     })
 
                     holeMarker.addEventListener('gmp-click', (event) => {

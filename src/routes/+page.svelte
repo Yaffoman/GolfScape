@@ -1,10 +1,10 @@
 <script>
     import {onMount} from 'svelte';
-  import { courseStore, selectCourse, selectHole } from '../lib/stores/courseStore';
-  import CourseOverview from '../lib/components/CourseOverview.svelte';
-  import IntroSection from '../lib/components/IntroSection.svelte';
+    import {courseStore, selectCourse, selectHole} from '../lib/stores/courseStore';
+    import CourseOverview from '../lib/components/CourseOverview.svelte';
+    import IntroSection from '../lib/components/IntroSection.svelte';
     import {calculateHeading, calculateRange, calculateDistance, calculateMidpoint} from '$lib';
-  //   const parser = new DOMParser();
+    //   const parser = new DOMParser();
 
     let Marker = null;
     let MarkerList = [];
@@ -22,20 +22,13 @@
         flyToCourse(course);
     }
 
-    console.log(imageList)
-
     function selectAndFlyToHole(hole) {
         selectHole(hole)
-        flyToHole(hole, 0);
-        // mapObject.flyCameraAround({
-        //     camera: {
-        //         center: {lat: hole.latitude.at(-1), lng: hole.longitude.at(-1), altitude: 100},
-        //         range: 200,
-        //         tilt: 67.5,
-        //     },
-        //     durationMillis: 6000,
-        //     rounds: 1
-        // });
+        flyToHole();
+    }
+    async function flyToPoint(cameraOptions){
+        await mapObject.flyCameraTo(cameraOptions);
+        await new Promise(resolve => setTimeout(resolve, cameraOptions.durationMillis - 100));
     }
 
     onMount(async () => {
@@ -73,8 +66,8 @@
                     })
 
                     holeMarker.addEventListener('gmp-click', (event) => {
-                           selectAndFlyToHole(holeData);
-                           MarkerList.forEach(marker => marker.setVisible(false));
+                        selectAndFlyToHole(holeData);
+                        // MarkerList.forEach(marker => marker.setVisible(false));
                     });
 
                     mapObject.append(holeMarker);
@@ -86,22 +79,65 @@
     }
 
 
-    function flyToHole(hole_number, step) {
+    async function flyToHole() {
+        const duration = 3000;
         const hole = $courseStore.selectedHole;
-        const midpoint = calculateMidpoint(hole.latitude[step], hole.longitude[step], hole.latitude[step + 1], hole.longitude[step + 1]);
-        const distance = calculateDistance(hole.latitude[step], hole.longitude[step], midpoint.lat, midpoint.lng);
-        const range = calculateRange(distance, 67.5);
-        mapObject.flyCameraTo({
+        let heading = 0;
+        let range = 200;
+        const tilt = 67.5;
+        for (let step = 0; step < hole.latitude.length - 1; step++) {
+            const midpoint = calculateMidpoint(hole.latitude[step], hole.longitude[step], hole.latitude[step + 1], hole.longitude[step + 1]);
+            const distance = calculateDistance(hole.latitude[step], hole.longitude[step], midpoint.lat, midpoint.lng);
+            range = calculateRange(distance, tilt);
+            heading = calculateHeading(hole.latitude[step], hole.longitude[step], hole.latitude[step + 1], hole.longitude[step + 1]);
+            await flyToPoint({
+                endCamera: {
+                    center: {...midpoint, altitude: 150},
+                    heading: heading,
+                    tilt: tilt,
+                    range: range - 150
+                },
+                durationMillis: duration
+            });
+        }
+        await flyToPoint({
             endCamera: {
-                center: {...midpoint, altitude: 30},
-                heading: calculateHeading(hole.latitude[step], hole.longitude[step], hole.latitude[step+1], hole.longitude[step+1]),
-                tilt: 67.5,
-                range: range
+                center: {
+                    lng: hole.longitude.at(-1),
+                    lat: hole.latitude.at(-1),
+                    altitude: 150
+                },
+                heading: heading,
+                tilt: tilt,
+                range: range - 150
             },
-            durationMillis: 3000
+            durationMillis: duration
+        });
+        await flyToPoint({
+            endCamera: {
+                center: {
+                    lng: hole.longitude.at(-1),
+                    lat: hole.latitude.at(-1),
+                    altitude: 150
+                },
+                heading: heading,
+                tilt: tilt - 20,
+                range: range - 150
+            },
+            durationMillis: 200
+        });
+        mapObject.flyCameraAround({
+            camera: {
+                center: {lat: hole.latitude.at(-1), lng: hole.longitude.at(-1), altitude: 150},
+                range: range - 150,
+                tilt: 35,
+                heading: heading
+            },
+            durationMillis: 6000,
+            rounds: 1
         });
     }
-selectCourse($courseStore.courses[0])
+    selectCourse($courseStore.courses[0])
 </script>
 <!--<IntroSection/>-->
 <!--{#each $courseStore.courses as course}-->

@@ -14,6 +14,7 @@
           <p class="mb-5">
             {course.description}
           </p>
+          <a href={`/course/${course.name.toLowerCase().replaceAll(" ", '-')}`} class="btn btn-primary">Visit Course</a>
           <!-- Stat list -->
         </div>
       </div>

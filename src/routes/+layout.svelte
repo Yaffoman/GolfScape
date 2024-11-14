@@ -1,15 +1,14 @@
-<script>
-  import { onMount } from "svelte";
-    import "../app.css";
-    import Navbar from "../lib/components/Navbar.svelte";
-    import { courseStore, setCourses } from "../lib/stores/courseStore";
+<script context="module">
+    export { load } from './+layout.js';
+</script>
 
-    onMount(async () => {
-        const response = await fetch('src/lib/data.json');
-        const data = await response.json();
-        setCourses(data.courses);
-        console.log($courseStore)
-    })
+<script>
+    import "../app.css";
+    import { goto } from "$app/navigation"
+    import Navbar from "../lib/components/Navbar.svelte";
+    import { courseStore } from '../lib/stores/courseStore.js';
+    import { onMount } from 'svelte';
+
 </script>
 
 <Navbar>

@@ -138,57 +138,9 @@
         });
     }
     selectCourse($courseStore.courses[0])
+    
 </script>
-<!--<IntroSection/>-->
-<!--{#each $courseStore.courses as course}-->
-<!--    <CourseOverview course={course}/>-->
-<!--{/each}-->
-
-<div class="min-h-screen bg-base-200 p-10">
-    <div class="text-center">
-        <p class="py-6">Explore golf courses in 3D realism and take a virtual tour of your favorite courses.</p>
-    </div>
-
-    {#if !$courseStore.selectedCourse}
-        <div class="grid grid-cols-2">
-            {#each $courseStore.courses as course}
-                <div class="card">
-
-                    <div class="card-body items-center">
-                        <button class="btn btn-primary w-fit" on:click={() => selectAndFlyToCourse(course)}>
-                            {course.name}
-                        </button>
-                    </div>
-                </div>
-
-            {/each}
-        </div>
-    {:else if !$courseStore.selectedHole}
-        <div class="text-center">
-            <h2 class="text-3xl">Selected Course: {$courseStore.selectedCourse}</h2>
-            <p class="py-4">Select a hole to continue:</p>
-            <div class="grid grid-cols-6 gap-4">
-                {#each $courseStore.selectedCourse.holes as hole}
-                    <button class="btn btn-secondary" on:click={() => selectAndFlyToHole(hole)}>
-                        Hole {hole}
-                    </button>
-                {/each}
-            </div>
-        </div>
-    {:else}
-        <div class="text-center">
-            <h2 class="text-3xl">Course: {$courseStore.selectedCourse}</h2>
-            <p class="py-4">Hole {$courseStore.selectedHole}</p>
-            <div class="card w-full bg-base-100 shadow-xl">
-                <div class="card-body">
-                    <h2 class="card-title">{$courseStore.selectedCourse} - Hole {$courseStore.selectedHole}</h2>
-                    <p>Experience this hole in full 3D realism with GolfScape's detailed virtual tour.</p>
-                </div>
-            </div>
-            <button class="btn btn-outline mt-6" on:click={() => ($courseStore.selectedCourse = null)}>
-                Back to Courses
-            </button>
-        </div>
-    {/if}
-    <div id="map_container" class="h-[500px]"></div>
-</div>
+<IntroSection/>
+{#each $courseStore.courses as course}
+   <CourseOverview course={course}/>
+{/each}

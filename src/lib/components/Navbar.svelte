@@ -1,5 +1,9 @@
 <script>
     import { courseStore, selectCourse } from "../stores/courseStore";
+
+    function getCourseUrl(course) {
+      return `/course/${course.name.toLowerCase().replaceAll(" ", "-")}`;
+    }
 </script>
 
 <div class="navbar bg-base-100">
@@ -23,13 +27,13 @@
           class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
           {#each $courseStore.courses as course}
             <li>
-                <button tabindex="0" on:click={() => selectCourse(course)}>{course.name}</button></li>
+                <a href="{getCourseUrl(course)}" on:click={() => selectCourse(course)}>{course.name}</a></li>
           {/each}
         </ul>
       </div>
     </div>
     <div class="navbar-center">
-      <div class="btn btn-ghost text-xl">GolfScape</div>
+      <a class="btn btn-ghost text-xl" href="/">GolfScape</a>
     </div>
     <div class="navbar-end">
       

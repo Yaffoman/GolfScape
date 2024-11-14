@@ -39,3 +39,14 @@
 </div>
 
 <Map/>
+
+<div class="w-full">
+    <div class="join mx-auto w-full">
+        {#each Object.values($courseStore.selectedCourse.holes) as hole, index}
+            <button class="join-item btn">
+                {index + 1}
+            </button>
+        {/each}
+    </div>
+</div>
+

@@ -27,13 +27,14 @@
           class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
           {#each $courseStore.courses as course}
             <li>
-                <a href="{getCourseUrl(course)}" on:click={() => selectCourse(course)}>{course.name}</a></li>
+                <a class="text-primary text-lg font-medium" href="{getCourseUrl(course)}" on:click={() => selectCourse(course)}>{course.name}</a>
+            </li>
           {/each}
         </ul>
       </div>
     </div>
     <div class="navbar-center">
-      <a class="btn btn-ghost text-xl" href="/">GolfScape</a>
+      <a class="btn btn-ghost text-xl text-primary" href="/">GolfScape</a>
     </div>
     <div class="navbar-end">
       

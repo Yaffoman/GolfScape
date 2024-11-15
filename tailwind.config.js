@@ -10,7 +10,7 @@ export default {
     themes: [
       {
         golfscape: {
-          primary: "#3E5F34",
+          primary: "#576238",
 
           secondary: "#7a4e36",
 

@@ -6,7 +6,14 @@
     import { onMount } from "svelte";
     import { courseStore } from "../../../lib/stores/courseStore";
     import Map from "../../../lib/components/Map.svelte";
+    import { flyToHole } from "$lib";
+
     console.log($courseStore.selectedCourse)
+
+    function handleHoleSelection(hole) {
+        console.log(hole)
+        flyToHole(hole)
+    }
 
 </script>
 <div class="relative">
@@ -38,15 +45,35 @@
     </a>
 </div>
 
-<Map/>
-
-<div class="w-full">
-    <div class="join mx-auto w-full">
-        {#each Object.values($courseStore.selectedCourse.holes) as hole, index}
-            <button class="join-item btn">
-                {index + 1}
-            </button>
-        {/each}
+<div class="w-full flex flex-row">
+    <div class="w-1/7 flex flex-col items-center mt-4">
+        <h1 class="text-center text-xl font-bold text-secondary">Hole Selection</h1>
+        <div class="grid grid-cols-2 gap-2">
+            <!-- Front 9 -->
+            <div class="flex flex-col">
+                {#each $courseStore.selectedCourse.holes.slice(0, 9) as hole, index}
+                    <button class="btn w-12 my-[1px] text-neutral-content bg-primary" on:click={() => handleHoleSelection(hole)}>
+                        {index + 1}
+                    </button>
+                {/each}
+            </div>
+            <!-- Back 9 -->
+            <div class="flex flex-col">
+                {#each $courseStore.selectedCourse.holes.slice(9, 18) as hole, index}
+                    <button class="btn w-12 my-[1px] text-neutral-content bg-primary" on:click={() => handleHoleSelection(hole)}>
+                        {index + 10}
+                    </button>
+                {/each}
+            </div>
+        </div>
     </div>
+    <div class="w-full h-full">
+        <Map/>
+    </div>
+    {#if $courseStore.selectedHole}
+        <div class="w-1/7 flex flex-col items-center mt-4">
+            <h1 class="text-center text-xl font-bold text-secondary">Hole { $courseStore.selectedHole.hole }</h1>
+        </div>
+    {/if}
 </div>
 

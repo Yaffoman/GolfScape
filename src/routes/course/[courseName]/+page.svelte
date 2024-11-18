@@ -163,7 +163,7 @@
                     <div class="space-y-2">
                         <div class="flex flex-row">
                             <h2 class="font-semibold text-lg">Yardage</h2>
-                            <div class="divider divider-horizontal"></div>
+                            <div class="divider divider-horizontal mx-[0px]"></div>
                             <h3 class="font-semibold text-lg">
                                 Handicap { $courseStore.selectedHole.index }
                             </h3>

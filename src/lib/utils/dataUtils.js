@@ -22,8 +22,8 @@ export const POI_PATH = [
     POI.ONE_HUNDRED_MARKER,
     POI.GREEN
 ]
-import tpSouth from '../../../static/lib/tp south.json' with {type: "json"};
-import data from '../../../static/lib/data.json' with {type: "json"};
+// import tpSouth from '../../../static/lib/tp south.json' with {type: "json"};
+// import data from '../../../static/lib/data.json' with {type: "json"};
 import fs from 'fs'
 
 function parseAPIData() {

@@ -4,14 +4,11 @@
     import {flyToCourse} from "$lib";
     
     let mapObject;
-    let MarkerList = [];
-    let Marker;
     let google = window.google;
 
     onMount(async () => {
         console.log("calling on mount!!")
-        const {Map3DElement, Marker3DInteractiveElement} = await google.maps.importLibrary("maps3d");
-        Marker = Marker3DInteractiveElement;
+        const {Map3DElement} = await google.maps.importLibrary("maps3d");
         mapObject = new Map3DElement({
             center: {lat: 37.36353, lng: -121.9286, altitude: 10000},
             tilt: 67.5,

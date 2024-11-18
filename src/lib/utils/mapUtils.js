@@ -114,11 +114,50 @@ export async function flyThroughHole(hole) {
     const store = get(courseStore);
     if (store.flyingThroughHole) return;
     setFlyingThroughHole(true);
-
+    const flagURL = "https://upload.wikimedia.org/wikipedia/commons/9/94/Golf_flag_icon2.svg"
     const mapObject = store.mapObject;
     if (!mapObject) return;
+    if (window.google?.maps?.maps3d?.Marker3DElement) {
+        console.log(window.google.maps)
+        const Marker = window.google.maps.maps3d.Marker3DElement;
+        hole.poi.forEach((poi) => {
+            console.log(poi)
+            const {latitude, longitude} = poi;
+            let label = ""
+            switch (poi.poi) {
+                case POI.GREEN:
+                    if (poi.center)
+                        label = "Green";
+                    break;
+                case POI.GREEN_BUNKER:
+                    label = "Bunker";
+                    break;
+                case POI.FAIRWAY_BUNKER:
+                    label = "Bunker";
+                    break;
+                case POI.FAIRWAY:
+                    label = "Fairway";
+                    break;
+            }
+            if (label === "") return;
+            let holeMarker = new Marker({
+                position: {lat: latitude, lng: longitude},
+                altitudeMode: "RELATIVE_TO_GROUND",
+                label: label,
+            });
+            // set hole icon to flag
+            if (poi.poi === POI.GREEN) {
+            //     add flag to default slot
+                const temp = document.createElement('template');
+                const flag = document.createElement('img');
+                flag.src = flagURL;
+                temp.appendChild(flag);
+                holeMarker.appendChild(temp);
+            }
+            mapObject.append(holeMarker);
 
-    
+        });
+    }
 
     selectHole(hole);
     const duration = 3000;
@@ -177,18 +216,18 @@ export async function flyThroughHole(hole) {
     });
 
     mapObject.flyCameraAround({
-      camera: {
-        center: {
-          lat: path.at(-1).latitude,
-          lng: path.at(-1).longitude,
-          altitude: 150,
+        camera: {
+            center: {
+                lat: path.at(-1).latitude,
+                lng: path.at(-1).longitude,
+                altitude: 150,
+            },
+            range: 150,
+            tilt: 35,
+            heading: heading,
         },
-        range: 150,
-        tilt: 35,
-        heading: heading,
-      },
-      durationMillis: 6000,
-      rounds: 1,
+        durationMillis: 6000,
+        rounds: 1,
     });
 
     setFlyingThroughHole(false);

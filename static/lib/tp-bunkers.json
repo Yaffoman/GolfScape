@@ -1,0 +1,34 @@
+{
+  "bunkers": [
+    {
+      "poi": 2,
+      "hole": 1,
+      "latitude": 32.902984,
+      "longitude": -117.247634
+    },
+    {
+      "poi": 2,
+      "hole": 1,
+      "latitude": 32.902853,
+      "longitude": -117.247918
+    },
+    {
+      "poi": 2,
+      "hole": 1,
+      "latitude": 32.902501,
+      "longitude": -117.247885
+    },
+    {
+      "poi": 2,
+      "hole": 1,
+      "latitude": 32.902405,
+      "longitude": -117.249237
+    },
+    {
+      "poi": 2,
+      "hole": 1,
+      "latitude": 32.902153,
+      "longitude": -117.249290
+    }
+  ]
+}

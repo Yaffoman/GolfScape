@@ -114,44 +114,53 @@ export async function flyThroughHole(hole) {
     const store = get(courseStore);
     if (store.flyingThroughHole) return;
     setFlyingThroughHole(true);
-    const flagURL = "https://upload.wikimedia.org/wikipedia/commons/9/94/Golf_flag_icon2.svg"
+    const flagURL = "/flag.png"
+    const bunkerURL = "/exclamation.png"
     const mapObject = store.mapObject;
     if (!mapObject) return;
     if (window.google?.maps?.maps3d?.Marker3DElement) {
         console.log(window.google.maps)
         const Marker = window.google.maps.maps3d.Marker3DElement;
+        // TODO convert mt to yds
+        const tee = hole.poi.find((p) => {
+            return p.poi === POI.BACK_TEE;
+        })
         hole.poi.forEach((poi) => {
             console.log(poi)
             const {latitude, longitude} = poi;
             let label = ""
+            let icon = ""
             switch (poi.poi) {
                 case POI.GREEN:
                     if (poi.center)
                         label = "Green";
+                    icon = flagURL;
                     break;
                 case POI.GREEN_BUNKER:
                     label = "Bunker";
+                    label = Math.round(calculateDistance(tee.latitude, tee.longitude, latitude, longitude)) + " yds"
+                    icon = bunkerURL;
                     break;
                 case POI.FAIRWAY_BUNKER:
                     label = "Bunker";
+                    label = Math.round(calculateDistance(tee.latitude, tee.longitude, latitude, longitude)) + " yds"
+                    icon = bunkerURL;
                     break;
                 case POI.FAIRWAY:
                     label = "Fairway";
                     break;
             }
-            if (label === "") return;
+            if (label === "" ) return;
             let holeMarker = new Marker({
                 position: {lat: latitude, lng: longitude},
                 altitudeMode: "RELATIVE_TO_GROUND",
                 label: label,
             });
-            // set hole icon to flag
-            if (poi.poi === POI.GREEN) {
-            //     add flag to default slot
-                const temp = document.createElement('template');
+            if (icon !== "") {
                 const flag = document.createElement('img');
-                flag.src = flagURL;
-                temp.appendChild(flag);
+                flag.src = icon;
+                const temp = document.createElement('template');
+                temp.content.append(flag);
                 holeMarker.appendChild(temp);
             }
             mapObject.append(holeMarker);

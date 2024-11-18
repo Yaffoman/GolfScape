@@ -146,6 +146,9 @@ export async function flyThroughHole(hole) {
                     label = Math.round(calculateDistance(tee.latitude, tee.longitude, latitude, longitude)) + " yds"
                     icon = bunkerURL;
                     break;
+                case POI.WATER:
+                    label = "Water";
+                    break;
                 case POI.FAIRWAY:
                     label = "Fairway";
                     break;
@@ -169,7 +172,7 @@ export async function flyThroughHole(hole) {
     }
 
     selectHole(hole);
-    const duration = 3000;
+    const duration = 5000;
     let heading = 0;
     let range = 200;
     const tilt = 67.5;

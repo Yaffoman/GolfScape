@@ -1,13 +1,15 @@
 <script>
     import { onMount } from "svelte";
-    import {courseStore, selectHole, setMapObject} from "../stores/courseStore";
+    import {courseStore, setMapObject} from "../stores/courseStore";
     import {flyToCourse} from "$lib";
     
     let mapObject;
     let MarkerList = [];
     let Marker;
+    let google = window.google;
 
     onMount(async () => {
+        console.log("calling on mount!!")
         const {Map3DElement, Marker3DInteractiveElement} = await google.maps.importLibrary("maps3d");
         Marker = Marker3DInteractiveElement;
         mapObject = new Map3DElement({

@@ -1,14 +1,12 @@
-import { selectCourse } from "../../../lib/stores/courseStore";
-
+import { selectCourse } from "$lib/stores/courseStore.js";
+import * as data from "$lib/data.json";
 export async function load({ params }) {
     console.log('params', params);
     const { courseName } = params;
     console.log('courseName', courseName);
 
     // Fetch the courses data
-    const response = await fetch('/lib/data.json'); 
-    const data = await response.json();
-    const courses = data.courses; 
+    const courses = data.courses;
 
     console.log('Fetched courses:', courses);
 

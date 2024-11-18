@@ -1,6 +1,6 @@
 export {
     flyToCourse,
-    flyToHole,
+    flyThroughHole,
     calculateHeading,
     calculateDistance,
     calculateRange,

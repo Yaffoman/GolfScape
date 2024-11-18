@@ -6,13 +6,13 @@
     import { onMount } from "svelte";
     import { courseStore } from "../../../lib/stores/courseStore";
     import Map from "../../../lib/components/Map.svelte";
-    import { flyToHole } from "$lib";
+    import { flyThroughHole } from "$lib";
 
     console.log($courseStore.selectedCourse)
 
     function handleHoleSelection(hole) {
         console.log(hole)
-        flyToHole(hole)
+        flyThroughHole(hole)
     }
 
 </script>

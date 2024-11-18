@@ -1,9 +1,8 @@
 import { setCourses } from "../lib/stores/courseStore";
 export const ssr = false;
+import * as data from "$lib/data.json";
 
 export async function load() {
-    const response = await fetch('/lib/data.json');
-    const data = await response.json();
     setCourses(data.courses);
 
     return {

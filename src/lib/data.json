@@ -497,8 +497,8 @@
             {
               "poi": 1,
               "center": true,
-              "latitude": 32.8993535,
-              "longitude": -117.2456431
+              "latitude": 32.899533,
+              "longitude": -117.245497
             },
             {
               "poi": 1,
@@ -520,13 +520,13 @@
             },
             {
               "poi": 2,
-              "latitude": 32.899502,
-              "longitude": -117.245706
+              "latitude": 32.899500,
+              "longitude": -117.245734
             },
             {
               "poi": 2,
-              "latitude": 32.899605,
-              "longitude": -117.245341
+              "latitude": 32.899600,
+              "longitude": -117.245342
             }
           ]
         },

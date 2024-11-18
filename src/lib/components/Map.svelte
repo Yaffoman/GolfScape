@@ -26,4 +26,4 @@
 
 </script>
 
-<div id="map_container" class="h-[500px] p-10 "></div>
+<div id="map_container" class="h-full w-full"></div>

@@ -19,13 +19,13 @@
     function handlePrevHole() {
         const curHoleIndex = $courseStore.selectedHole.hole
         const prevHoleIndex = curHoleIndex - 1
-        flyToHole($courseStore.selectedCourse.holes[prevHoleIndex - 1])
+        flyThroughHole($courseStore.selectedCourse.holes[prevHoleIndex - 1])
     }
 
     function handleNextHole() {
         const curHoleIndex = $courseStore.selectedHole.hole
         const nextHoleIndex = curHoleIndex + 1
-        flyToHole($courseStore.selectedCourse.holes[nextHoleIndex - 1])
+        flyThroughHole($courseStore.selectedCourse.holes[nextHoleIndex - 1])
     }
 
 </script>

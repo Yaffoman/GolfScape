@@ -128,6 +128,7 @@ export async function flyThroughHole(hole) {
     const flagURL = "/flag.png"
     const bunkerURL = "/exclamation.png"
     const mapObject = store.mapObject;
+    const course = store.selectedCourse;
     if (!mapObject) return;
     if (window.google?.maps?.maps3d?.Marker3DElement) {
         console.log(window.google.maps)
@@ -201,10 +202,11 @@ export async function flyThroughHole(hole) {
     selectHole(hole);
     const duration = 5000;
     let heading = 0;
-    let range = 200;
+    let range = 50;
     const tilt = 67.5;
+    const altitudeOffset = course.altitude;
     const path = []
-    const altitude = 80;
+    const altitude = 60;
     POI_PATH.forEach((poi) => {
         const {longitude, latitude} = hole.poi.find((p) => {
             return p.poi === poi;
@@ -212,46 +214,61 @@ export async function flyThroughHole(hole) {
         if (!longitude || !latitude) return;
         path.push({longitude: longitude, latitude: latitude})
     });
-    for (let step = 0; step < path.length - 1; step++) {
-        const midpoint = calculateMidpoint(
-            path[step].latitude,
-            path[step].longitude,
-            path[step + 1].latitude,
-            path[step + 1].longitude
-        );
-        const distance = calculateDistance(
-            path[step].latitude,
-            path[step].longitude,
-            midpoint.lat,
-            midpoint.lng
-        );
-        range = calculateRange(distance, tilt);
-        heading = calculateHeading(
-            path[step].latitude,
-            path[step].longitude,
-            path[step + 1].latitude,
-            path[step + 1].longitude
-        );
+    // for (let step = 0; step < path.length - 1; step++) {
+    //     const midpoint = calculateMidpoint(
+    //         path[step].latitude,
+    //         path[step].longitude,
+    //         path[step + 1].latitude,
+    //         path[step + 1].longitude
+    //     );
+    //     const distance = calculateDistance(
+    //         path[step].latitude,
+    //         path[step].longitude,
+    //         midpoint.lat,
+    //         midpoint.lng
+    //     );
+    //     range = calculateRange(distance, tilt);
+    //     heading = calculateHeading(
+    //         path[step].latitude,
+    //         path[step].longitude,
+    //         path[step + 1].latitude,
+    //         path[step + 1].longitude
+    //     );
 
-        await flyToPoint({
-            endCamera: {
-                center: {...midpoint, altitude: altitude},
-                heading: heading,
-                tilt: tilt,
-                range: range,
-            },
-            durationMillis: duration,
-        });
-    }
+    //     await flyToPoint({
+    //         endCamera: {
+    //             center: {...midpoint, altitude: altitude},
+    //             heading: heading,
+    //             tilt: tilt,
+    //             range: range,
+    //         },
+    //         durationMillis: duration,
+    //     });
+    // }
+    heading = calculateHeading(
+                path[0].latitude,
+                path[0].longitude,
+                path.at(-1).latitude,
+                path.at(-1).longitude
+            );
+    await flyToPoint({
+        endCamera: {
+            center: {lng: path.at(0).longitude, lat: path.at(0).latitude, altitude: 50 + altitudeOffset},
+            heading: heading,
+            tilt: 80,
+            range: 50,
+        },
+        durationMillis: 3000,
+    });
 
     await flyToPoint({
         endCamera: {
-            center: {lng: path.at(-1).longitude, lat: path.at(-1).latitude, altitude: 150},
+            center: {lng: path.at(-1).longitude, lat: path.at(-1).latitude, altitude: 80 + altitudeOffset},
             heading: heading,
-            tilt: tilt,
-            range: 150,
+            tilt: 0,
+            range: 50,
         },
-        durationMillis: duration,
+        durationMillis: 5000,
     });
 
     mapObject.flyCameraAround({
@@ -259,13 +276,13 @@ export async function flyThroughHole(hole) {
             center: {
                 lat: path.at(-1).latitude,
                 lng: path.at(-1).longitude,
-                altitude: 150,
+                altitude: 80 + altitudeOffset,
             },
-            range: 150,
-            tilt: 35,
+            range: 50,
+            tilt: 0,
             heading: heading,
         },
-        durationMillis: 6000,
+        durationMillis: 8000,
         rounds: 1,
     });
 

@@ -54,7 +54,7 @@
     <div class="relative">
         <div
             class="hero min-h-[20vh]"
-            style="background-image: url(/src/lib/images/{$courseStore.selectedCourse.image});">
+            style="background-image: url(/images/{$courseStore.selectedCourse.image});">
             <div class="hero-overlay bg-opacity-60"></div>
             <div class="hero-content text-neutral-content text-center">
                 <div class="max-w-md">

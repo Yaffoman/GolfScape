@@ -8,7 +8,7 @@
 
 <div
   class="hero min-h-screen"
-  style="background-image: url('/src/lib/images/{course.image}');">
+  style="background-image: url('/images/{course.image}');">
   <div class="hero-overlay bg-opacity-60"></div>
   <div class="flex flex-col lg:flex-row">
     <div class="hero-content text-neutral-content text-center lg:text-left">

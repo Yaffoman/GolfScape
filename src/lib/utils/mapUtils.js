@@ -121,82 +121,78 @@ export async function flyToPoint(cameraOptions) {
     );
 }
 
+async function buildMarker(lat, lng, altitude, tee, color) {
+    const Marker = window.google.maps.maps3d.Marker3DElement;
+    const {PinElement} = await window.google.maps.importLibrary("marker");
+
+    let markerOptions = {
+        position: {lat, lng, altitude},
+        altitudeMode: "RELATIVE_TO_GROUND",
+        extruded: false,
+        label: '',
+    };
+    if (!tee) {
+        markerOptions.label = "Fairway"
+        return new Marker(markerOptions);
+    }
+    const pinScaled = new PinElement({
+        scale: 0.5,
+        glyphColor: "white",
+    })
+
+    markerOptions.label = Math.round(convertMetersToYards(calculateDistance(tee.latitude, tee.longitude, lat, lng))) + " yds"
+    markerOptions.position.altitude = 5;
+    markerOptions.extruded = true;
+    pinScaled.background = color;
+    pinScaled.borderColor = color;
+    let holeMarker = new Marker(markerOptions);
+    holeMarker.append(pinScaled);
+    return holeMarker;
+}
+
+function removeMarkers() {
+    document.querySelectorAll('gmp-marker-3d').forEach((marker) => {
+        // remove all markers that are not interactive (holes)
+        marker.remove();
+    });
+}
+
 export async function flyThroughHole(hole) {
     const store = get(courseStore);
     if (store.flyingThroughHole) return;
     setFlyingThroughHole(true);
-    const flagURL = "/flag.png"
-    const bunkerURL = "/exclamation.png"
     const mapObject = store.mapObject;
     const course = store.selectedCourse;
     if (!mapObject) return;
     if (window.google?.maps?.maps3d?.Marker3DElement) {
-        console.log(window.google.maps)
-        const Marker = window.google.maps.maps3d.Marker3DElement;
-        const {PinElement} = await window.google.maps.importLibrary("marker");
-
-        // TODO convert mt to yds
         const tee = hole.poi.find((p) => {
             return p.poi === POI.BACK_TEE;
         })
-        hole.poi.forEach((poi) => {
+        removeMarkers(mapObject, store.holeMarkers);
+        for (const poi of hole.poi) {
             const {latitude, longitude} = poi;
-            let label = ""
-            let icon = ""
-
-            let markerOptions = {
-                position: {lat: latitude, lng: longitude},
-                altitudeMode: "RELATIVE_TO_GROUND",
-                extruded: false,
-                label: label,
-            };
-
-            const pinScaled = new PinElement({
-                scale: 0.5,
-                glyphColor: "white",
-            })
-
+            let newMarker = null;
             switch (poi.poi) {
                 case POI.GREEN:
                     if (poi.center) {
-                        markerOptions.label =  Math.round(convertMetersToYards(calculateDistance(tee.latitude, tee.longitude, latitude, longitude))) + " yds"
-                        markerOptions.position.altitude = 5;
-                        markerOptions.extruded = true;
-                        let holeMarker = new Marker(markerOptions);
-                        pinScaled.background = "#008000";
-                        pinScaled.borderColor = "#008000";
-                        holeMarker.append(pinScaled);
-                        mapObject.append(holeMarker);
+                        newMarker = await buildMarker(latitude, longitude, 5, tee, "#008000");
                     }
                     break;
                 case POI.GREEN_BUNKER:
                 case POI.FAIRWAY_BUNKER:
-                    markerOptions.label =  Math.round(convertMetersToYards(calculateDistance(tee.latitude, tee.longitude, latitude, longitude))) + " yds"
-                    markerOptions.extruded = true;
-                    markerOptions.position.altitude = 10;
-                    let bunkerMarker = new Marker(markerOptions);
-                    pinScaled.background = "#F5DEB3";
-                    pinScaled.borderColor = "#F5DEB3";
-                    bunkerMarker.append(pinScaled);
-                    mapObject.append(bunkerMarker);
+                    newMarker = await buildMarker(latitude, longitude, 10, tee, "#F5DEB3");
                     break;
                 case POI.WATER:
-                    markerOptions.label =  Math.round(convertMetersToYards(calculateDistance(tee.latitude, tee.longitude, latitude, longitude))) + " yds"
-                    markerOptions.extruded = true;
-                    markerOptions.position.altitude = 10;
-                    let waterMarker = new Marker(markerOptions);
-                    pinScaled.background = "#0000FF";
-                    pinScaled.borderColor = "#0000FF";
-                    waterMarker.append(pinScaled);
-                    mapObject.append(waterMarker);
+                    newMarker = await buildMarker(latitude, longitude, 10, tee, "#0000FF");
                     break;
                 case POI.FAIRWAY:
-                    markerOptions.label = "Fairway";
-                    let fairwayMarker = new Marker(markerOptions);
-                    mapObject.append(fairwayMarker);
+                    newMarker = await buildMarker(latitude, longitude);
                     break;
             }
-        });
+            if (newMarker) {
+                mapObject.append(newMarker);
+            }
+        }
     }
 
     selectHole(hole);
@@ -212,46 +208,16 @@ export async function flyThroughHole(hole) {
         const {longitude, latitude} = hole.poi.find((p) => {
             return p.poi === poi && (p.poi === POI.GREEN ? p.center : true);
         }) || {longitude: null, latitude: null};
-        if (!longitude || !latitude ) return;
+        if (!longitude || !latitude) return;
         path.push({longitude: longitude, latitude: latitude})
     });
-    // for (let step = 0; step < path.length - 1; step++) {
-    //     const midpoint = calculateMidpoint(
-    //         path[step].latitude,
-    //         path[step].longitude,
-    //         path[step + 1].latitude,
-    //         path[step + 1].longitude
-    //     );
-    //     const distance = calculateDistance(
-    //         path[step].latitude,
-    //         path[step].longitude,
-    //         midpoint.lat,
-    //         midpoint.lng
-    //     );
-    //     range = calculateRange(distance, tilt);
-    //     heading = calculateHeading(
-    //         path[step].latitude,
-    //         path[step].longitude,
-    //         path[step + 1].latitude,
-    //         path[step + 1].longitude
-    //     );
 
-    //     await flyToPoint({
-    //         endCamera: {
-    //             center: {...midpoint, altitude: altitude},
-    //             heading: heading,
-    //             tilt: tilt,
-    //             range: range,
-    //         },
-    //         durationMillis: duration,
-    //     });
-    // }
     heading = calculateHeading(
-                path[0].latitude,
-                path[0].longitude,
-                path.at(-1).latitude,
-                path.at(-1).longitude
-            );
+        path[0].latitude,
+        path[0].longitude,
+        path.at(-1).latitude,
+        path.at(-1).longitude
+    );
     await flyToPoint({
         endCamera: {
             center: {lng: path.at(0).longitude, lat: path.at(0).latitude, altitude: 50 + altitudeOffset + holeAltitude},
@@ -264,7 +230,11 @@ export async function flyThroughHole(hole) {
 
     await flyToPoint({
         endCamera: {
-            center: {lng: path.at(-1).longitude, lat: path.at(-1).latitude, altitude: 80 + altitudeOffset + holeAltitude},
+            center: {
+                lng: path.at(-1).longitude,
+                lat: path.at(-1).latitude,
+                altitude: 80 + altitudeOffset + holeAltitude
+            },
             heading: heading,
             tilt: 0,
             range: 50,

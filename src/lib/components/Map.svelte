@@ -7,7 +7,6 @@
     let google = window.google;
 
     onMount(async () => {
-        console.log("calling on mount!!")
         const {Map3DElement} = await google.maps.importLibrary("maps3d");
 
         mapObject = new Map3DElement({

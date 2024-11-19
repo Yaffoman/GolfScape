@@ -165,7 +165,7 @@
                             <h2 class="font-semibold text-lg">Yardage</h2>
                             <div class="divider divider-horizontal mx-[0px]"></div>
                             <h3 class="font-semibold text-lg">
-                                Handicap { $courseStore.selectedHole.index }
+                                Handicap { $courseStore.selectedHole.handicap }
                             </h3>
                         </div>
                         

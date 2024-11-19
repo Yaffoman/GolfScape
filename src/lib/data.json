@@ -19,7 +19,7 @@
         {
           "hole": 1,
           "par": 4,
-          "index": 5,
+          "handicap": 5,
           "yardage": {
             "black": 451,
             "brown": 434,
@@ -72,7 +72,7 @@
             {
               "poi": 2,
               "latitude": 32.902706,
-              "longitude": -117.248260
+              "longitude": -117.24826
             },
             {
               "poi": 2,
@@ -81,7 +81,7 @@
             },
             {
               "poi": 2,
-              "latitude": 32.902170,
+              "latitude": 32.90217,
               "longitude": -117.249301
             }
           ]
@@ -89,7 +89,7 @@
         {
           "hole": 2,
           "par": 4,
-          "index": 15,
+          "handicap": 15,
           "yardage": {
             "black": 389,
             "brown": 361,
@@ -107,7 +107,7 @@
             {
               "poi": 1,
               "center": true,
-              "latitude": 32.899550,
+              "latitude": 32.89955,
               "longitude": -117.250028
             },
             {
@@ -140,8 +140,8 @@
             },
             {
               "poi": 2,
-              "latitude": 32.899690,
-              "longitude": -117.249880
+              "latitude": 32.89969,
+              "longitude": -117.24988
             },
             {
               "poi": 2,
@@ -153,7 +153,7 @@
         {
           "hole": 3,
           "par": 3,
-          "index": 13,
+          "handicap": 13,
           "yardage": {
             "black": 201,
             "brown": 159,
@@ -202,7 +202,7 @@
         {
           "hole": 4,
           "par": 4,
-          "index": 3,
+          "handicap": 3,
           "yardage": {
             "black": 490,
             "brown": 462,
@@ -248,7 +248,7 @@
             },
             {
               "poi": 2,
-              "latitude": 32.900862, 
+              "latitude": 32.900862,
               "longitude": -117.251587
             },
             {
@@ -261,7 +261,7 @@
         {
           "hole": 5,
           "par": 4,
-          "index": 11,
+          "handicap": 11,
           "yardage": {
             "black": 454,
             "brown": 404,
@@ -313,7 +313,7 @@
             {
               "poi": 2,
               "latitude": 32.899087,
-              "longitude": -117.250660
+              "longitude": -117.25066
             },
             {
               "poi": 2,
@@ -325,7 +325,7 @@
         {
           "hole": 6,
           "par": 5,
-          "index": 9,
+          "handicap": 9,
           "yardage": {
             "black": 564,
             "brown": 530,
@@ -404,7 +404,7 @@
         {
           "hole": 7,
           "par": 4,
-          "index": 1,
+          "handicap": 1,
           "yardage": {
             "black": 462,
             "brown": 443,
@@ -446,7 +446,7 @@
             {
               "poi": 2,
               "latitude": 32.900439,
-              "longitude": -117.246230
+              "longitude": -117.24623
             },
             {
               "poi": 2,
@@ -463,7 +463,7 @@
         {
           "hole": 8,
           "par": 3,
-          "index": 17,
+          "handicap": 17,
           "yardage": {
             "black": 177,
             "brown": 161,
@@ -504,12 +504,12 @@
             },
             {
               "poi": 2,
-              "latitude": 32.899500,
+              "latitude": 32.8995,
               "longitude": -117.245734
             },
             {
               "poi": 2,
-              "latitude": 32.899600,
+              "latitude": 32.8996,
               "longitude": -117.245342
             }
           ]
@@ -517,7 +517,7 @@
         {
           "hole": 9,
           "par": 5,
-          "index": 7,
+          "handicap": 7,
           "yardage": {
             "black": 615,
             "brown": 535,
@@ -564,7 +564,7 @@
             {
               "poi": 2,
               "latitude": 32.897463,
-              "longitude": -117.244360
+              "longitude": -117.24436
             },
             {
               "poi": 2,
@@ -578,7 +578,7 @@
             },
             {
               "poi": 2,
-              "latitude": 32.895860,
+              "latitude": 32.89586,
               "longitude": -117.244258
             },
             {
@@ -606,7 +606,7 @@
         {
           "hole": 10,
           "par": 4,
-          "index": 16,
+          "handicap": 16,
           "yardage": {
             "black": 454,
             "brown": 371,
@@ -625,7 +625,7 @@
               "poi": 1,
               "center": true,
               "latitude": 32.891798,
-              "longitude": -117.243480
+              "longitude": -117.24348
             },
             {
               "poi": 1,
@@ -647,13 +647,13 @@
             },
             {
               "poi": 2,
-              "latitude": 32.893162, 
+              "latitude": 32.893162,
               "longitude": -117.243451
             },
             {
               "poi": 2,
-              "latitude": 32.892850,
-              "longitude": -117.243730
+              "latitude": 32.89285,
+              "longitude": -117.24373
             },
             {
               "poi": 2,
@@ -662,7 +662,7 @@
             },
             {
               "poi": 2,
-              "latitude": 32.891910,
+              "latitude": 32.89191,
               "longitude": -117.243671
             }
           ]
@@ -670,7 +670,7 @@
         {
           "hole": 11,
           "par": 3,
-          "index": 14,
+          "handicap": 14,
           "yardage": {
             "black": 225,
             "brown": 202,
@@ -729,7 +729,7 @@
         {
           "hole": 12,
           "par": 4,
-          "index": 2,
+          "handicap": 2,
           "yardage": {
             "black": 505,
             "brown": 458,
@@ -798,7 +798,7 @@
         {
           "hole": 13,
           "par": 5,
-          "index": 6,
+          "handicap": 6,
           "yardage": {
             "black": 621,
             "brown": 539,
@@ -859,7 +859,7 @@
             },
             {
               "poi": 2,
-              "latitude": 32.891890,
+              "latitude": 32.89189,
               "longitude": -117.247384
             },
             {
@@ -870,7 +870,7 @@
             {
               "poi": 2,
               "latitude": 32.891438,
-              "longitude": -117.245310
+              "longitude": -117.24531
             },
             {
               "poi": 2,
@@ -882,11 +882,11 @@
               "latitude": 32.891407,
               "longitude": -117.245183
             },
-            
+
             {
               "poi": 2,
-              "latitude": 32.891610,
-              "longitude": -117.245040
+              "latitude": 32.89161,
+              "longitude": -117.24504
             },
             {
               "poi": 2,
@@ -903,7 +903,7 @@
         {
           "hole": 14,
           "par": 4,
-          "index": 8,
+          "handicap": 8,
           "yardage": {
             "black": 437,
             "brown": 414,
@@ -947,7 +947,7 @@
               "latitude": 32.893512,
               "longitude": -117.245119
             },
-            
+
             {
               "poi": 2,
               "latitude": 32.893639,
@@ -968,7 +968,7 @@
         {
           "hole": 15,
           "par": 4,
-          "index": 12,
+          "handicap": 12,
           "yardage": {
             "black": 517,
             "brown": 394,
@@ -1022,7 +1022,7 @@
         {
           "hole": 16,
           "par": 3,
-          "index": 18,
+          "handicap": 18,
           "yardage": {
             "black": 227,
             "brown": 204,
@@ -1081,7 +1081,7 @@
         {
           "hole": 17,
           "par": 3,
-          "index": 4,
+          "handicap": 4,
           "yardage": {
             "black": 443,
             "brown": 422,
@@ -1128,11 +1128,11 @@
             {
               "poi": 2,
               "latitude": 32.898006,
-              "longitude": -117.24580
+              "longitude": -117.2458
             },
             {
               "poi": 2,
-              "latitude": 32.898790,
+              "latitude": 32.89879,
               "longitude": -117.245241
             },
             {
@@ -1145,7 +1145,7 @@
         {
           "hole": 18,
           "par": 5,
-          "index": 10,
+          "handicap": 10,
           "yardage": {
             "black": 570,
             "brown": 522,
@@ -1186,12 +1186,12 @@
             },
             {
               "poi": 2,
-              "latitude": 32.900950,
+              "latitude": 32.90095,
               "longitude": -117.245469
             },
             {
               "poi": 2,
-              "latitude": 32.901040,
+              "latitude": 32.90104,
               "longitude": -117.245611
             },
             {
@@ -1201,7 +1201,7 @@
             },
             {
               "poi": 2,
-              "latitude": 32.901380,
+              "latitude": 32.90138,
               "longitude": -117.24516
             },
             {
@@ -1247,234 +1247,1004 @@
         {
           "hole": 1,
           "par": 4,
+          "handicap": 5,
           "yardage": {
             "black": 421,
             "brown": 410,
             "green": 395,
             "white": 351,
             "yellow": 322
-          }
+          },
+          "poi": [
+            {
+              "poi": 1,
+              "center": false,
+              "latitude": 32.9082805,
+              "longitude": -117.2465273
+            },
+            {
+              "poi": 1,
+              "center": true,
+              "latitude": 32.908187,
+              "longitude": -117.246493
+            },
+            {
+              "poi": 1,
+              "center": false,
+              "latitude": 32.9080801,
+              "longitude": -117.2464843
+            },
+            {
+              "poi": 11,
+              "center": true,
+              "latitude": 32.9056548,
+              "longitude": -117.2455992
+            },
+            {
+              "poi": 12,
+              "center": true,
+              "latitude": 32.9048734,
+              "longitude": -117.2453739
+            },
+            {
+              "poi": 2,
+              "latitude": 32.907237,
+              "longitude": -117.246399
+            },
+            {
+              "poi": 2,
+              "latitude": 32.908112,
+              "longitude": -117.246254
+            },
+            {
+              "poi": 2,
+              "latitude": 32.908024,
+              "longitude": -117.246542
+            }
+          ]
         },
         {
           "hole": 2,
           "par": 4,
+          "handicap": 1,
           "yardage": {
-            "black": 389,
-            "brown": 361,
-            "green": 344,
-            "white": 323,
-            "yellow": 283
+            "black": 495,
+            "brown": 431,
+            "green": 412,
+            "white": 355,
+            "yellow": 344
           },
-          "latitude": [32.90256, 32.900725, 32.899746],
-          "longitude": [-117.250149, -117.249812, -117.249988]
+          "poi": [
+            {
+              "poi": 1,
+              "center": false,
+              "latitude": 32.9118474,
+              "longitude": -117.2481862
+            },
+            {
+              "poi": 1,
+              "center": true,
+              "latitude": 32.91177,
+              "longitude": -117.248136
+            },
+            {
+              "poi": 1,
+              "center": false,
+              "latitude": 32.9116672,
+              "longitude": -117.248044
+            },
+            {
+              "poi": 11,
+              "center": true,
+              "latitude": 32.9091154,
+              "longitude": -117.2470349
+            },
+            {
+              "poi": 12,
+              "center": true,
+              "latitude": 32.9079287,
+              "longitude": -117.2468216
+            },
+            {
+              "poi": 2,
+              "latitude": 32.911615,
+              "longitude": -117.248218
+            }
+          ]
         },
         {
           "hole": 3,
           "par": 3,
+          "handicap": 13,
           "yardage": {
-            "black": 201,
-            "brown": 159,
-            "green": 146,
-            "white": 142,
-            "yellow": 106
+            "black": 241,
+            "brown": 183,
+            "green": 164,
+            "white": 145,
+            "yellow": 138
           },
-          "latitude": [32.899272, 32.897957],
-          "longitude": [-117.250003, -117.250631]
+          "poi": [
+            {
+              "poi": 1,
+              "center": false,
+              "latitude": 32.9112743,
+              "longitude": -117.2504272
+            },
+            {
+              "poi": 1,
+              "center": true,
+              "latitude": 32.911296,
+              "longitude": -117.250292
+            },
+            {
+              "poi": 1,
+              "center": false,
+              "latitude": 32.9113418,
+              "longitude": -117.2501858
+            },
+            {
+              "poi": 11,
+              "center": true,
+              "latitude": 32.9117376,
+              "longitude": -117.2489922
+            },
+            {
+              "poi": 12,
+              "center": true,
+              "latitude": 32.9121181,
+              "longitude": -117.2481741
+            },
+            {
+              "poi": 2,
+              "latitude": 32.911285,
+              "longitude": -117.250101
+            }
+          ]
         },
         {
           "hole": 4,
           "par": 4,
+          "handicap": 3,
           "yardage": {
-            "black": 490,
-            "brown": 462,
-            "green": 420,
-            "white": 384,
-            "yellow": 353
+            "black": 479,
+            "brown": 433,
+            "green": 416,
+            "white": 357,
+            "yellow": 317
           },
-          "latitude": [32.898259, 32.900576, 32.902056],
-          "longitude": [-117.2514, -117.251706, -117.251864]
+          "poi": [
+            {
+              "poi": 1,
+              "center": false,
+              "latitude": 32.9143085,
+              "longitude": -117.2479435
+            },
+            {
+              "poi": 1,
+              "center": true,
+              "latitude": 32.914218,
+              "longitude": -117.247963
+            },
+            {
+              "poi": 1,
+              "center": false,
+              "latitude": 32.9141002,
+              "longitude": -117.2480159
+            },
+            {
+              "poi": 11,
+              "center": true,
+              "latitude": 32.9120415,
+              "longitude": -117.2494247
+            },
+            {
+              "poi": 12,
+              "center": true,
+              "latitude": 32.911464,
+              "longitude": -117.2508288
+            },
+            {
+              "poi": 2,
+              "latitude": 32.912862,
+              "longitude": -117.248604
+            },
+            {
+              "poi": 2,
+              "latitude": 32.914106,
+              "longitude": -117.247865
+            },
+            {
+              "poi": 2,
+              "latitude": 32.914100,
+              "longitude": -117.248150
+            }
+          ]
         },
         {
           "hole": 5,
-          "par": 4,
+          "par": 5,
+          "handicap": 11,
           "yardage": {
-            "black": 454,
-            "brown": 404,
-            "green": 393,
-            "white": 382,
-            "yellow": 320
+            "black": 525,
+            "brown": 503,
+            "green": 483,
+            "white": 437,
+            "yellow": 424
           },
-          "latitude": [32.902245, 32.900435, 32.899155],
-          "longitude": [-117.251195, -117.25079, -117.250786]
+          "poi": [
+            {
+              "poi": 1,
+              "center": false,
+              "latitude": 32.9103713,
+              "longitude": -117.246534
+            },
+            {
+              "poi": 1,
+              "center": true,
+              "latitude": 32.910486,
+              "longitude": -117.246570
+            },
+            {
+              "poi": 1,
+              "center": false,
+              "latitude": 32.910601,
+              "longitude": -117.2466466
+            },
+            {
+              "poi": 11,
+              "center": true,
+              "latitude": 32.9138181,
+              "longitude": -117.2474815
+            },
+            {
+              "poi": 12,
+              "center": true,
+              "latitude": 32.9146659,
+              "longitude": -117.2473688
+            },
+            {
+              "poi": 2,
+              "latitude": 32.912295,
+              "longitude": -117.247666
+            },
+            {
+              "poi": 2,
+              "latitude": 32.912150,
+              "longitude": -117.247567
+            },
+            {
+              "poi": 2,
+              "latitude": 32.910610,
+              "longitude": -117.246445
+            }
+          ]
         },
         {
           "hole": 6,
-          "par": 5,
+          "par": 4,
+          "handicap": 7,
           "yardage": {
-            "black": 564,
-            "brown": 530,
-            "green": 505,
-            "white": 449,
-            "yellow": 431
+            "black": 416,
+            "brown": 400,
+            "green": 389,
+            "white": 380,
+            "yellow": 309
           },
-          "latitude": [32.899698, 32.901295, 32.90233],
-          "longitude": [-117.249521, -117.248423, -117.24676]
+          "poi": [
+            {
+              "poi": 1,
+              "center": false,
+              "latitude": 32.9141857,
+              "longitude": -117.2468666
+            },
+            {
+              "poi": 1,
+              "center": true,
+              "latitude": 32.914068,
+              "longitude": -117.246859
+            },
+            {
+              "poi": 1,
+              "center": false,
+              "latitude": 32.9139459,
+              "longitude": -117.2468491
+            },
+            {
+              "poi": 11,
+              "center": true,
+              "latitude": 32.9115417,
+              "longitude": -117.246489
+            },
+            {
+              "poi": 12,
+              "center": true,
+              "latitude": 32.9107029,
+              "longitude": -117.2462302
+            },
+            {
+              "poi": 2,
+              "latitude": 32.912984,
+              "longitude": -117.246890
+            },
+            {
+              "poi": 2,
+              "latitude": 32.914017,
+              "longitude": -117.246658
+            }
+          ]
         },
         {
           "hole": 7,
           "par": 4,
+          "handicap": 17,
           "yardage": {
-            "black": 462,
-            "brown": 443,
-            "green": 424,
-            "white": 387,
-            "yellow": 378
+            "black": 322,
+            "brown": 322,
+            "green": 290,
+            "white": 274,
+            "yellow": 233
           },
-          "latitude": [32.902899, 32.90042, 32.899376],
-          "longitude": [-117.24612, -117.2464, -117.247157]
+          "poi": [
+            {
+              "poi": 1,
+              "center": false,
+              "latitude": 32.9115816,
+              "longitude": -117.2458943
+            },
+            {
+              "poi": 1,
+              "center": true,
+              "latitude": 32.911685,
+              "longitude": -117.245887
+            },
+            {
+              "poi": 1,
+              "center": false,
+              "latitude": 32.911817,
+              "longitude": -117.2459305
+            },
+            {
+              "poi": 11,
+              "center": true,
+              "latitude": 32.9135885,
+              "longitude": -117.2462302
+            },
+            {
+              "poi": 12,
+              "center": true,
+              "latitude": 32.9142944,
+              "longitude": -117.2464528
+            },
+            {
+              "poi": 2,
+              "latitude": 32.912093,
+              "longitude": -117.245852
+            },
+            {
+              "poi": 2,
+              "latitude": 32.911849,
+              "longitude": -117.245832
+            },
+            {
+              "poi": 2,
+              "latitude": 32.911552,
+              "longitude": -117.245961
+            }
+          ]
         },
         {
           "hole": 8,
           "par": 3,
+          "handicap": 15,
           "yardage": {
-            "black": 177,
-            "brown": 161,
-            "green": 149,
-            "white": 139,
-            "yellow": 90
+            "black": 214,
+            "brown": 174,
+            "green": 167,
+            "white": 161,
+            "yellow": 128
           },
-          "latitude": [32.89906, 32.899415],
-          "longitude": [-117.247016, -117.245612]
+          "poi": [
+            {
+              "poi": 1,
+              "center": false,
+              "latitude": 32.9095472,
+              "longitude": -117.2463475
+            },
+            {
+              "poi": 1,
+              "center": true,
+              "latitude": 32.909619,
+              "longitude": -117.246302
+            },
+            {
+              "poi": 1,
+              "center": false,
+              "latitude": 32.9097307,
+              "longitude": -117.2462711
+            },
+            {
+              "poi": 11,
+              "center": true,
+              "latitude": 32.910641,
+              "longitude": -117.2459955
+            },
+            {
+              "poi": 12,
+              "center": true,
+              "latitude": 32.9113266,
+              "longitude": -117.2458601
+            },
+            {
+              "poi": 2,
+              "latitude": 32.909702,
+              "longitude": -117.246165
+            },
+            {
+              "poi": 2,
+              "latitude": 32.909760,
+              "longitude": -117.246473
+            }
+          ]
         },
         {
           "hole": 9,
           "par": 5,
+          "handicap": 9,
           "yardage": {
-            "black": 615,
-            "brown": 535,
-            "green": 514,
-            "white": 457,
-            "yellow": 432
+            "black": 556,
+            "brown": 512,
+            "green": 476,
+            "white": 460,
+            "yellow": 401
           },
-          "latitude": [32.900003, 32.89653, 32.895125],
-          "longitude": [-117.244425, -117.244104, -117.243967]
+          "poi": [
+            {
+              "poi": 1,
+              "center": false,
+              "latitude": 32.9052619,
+              "longitude": -117.2449649
+            },
+            {
+              "poi": 1,
+              "center": true,
+              "latitude": 32.905339,
+              "longitude": -117.244947
+            },
+            {
+              "poi": 1,
+              "center": false,
+              "latitude": 32.9054072,
+              "longitude": -117.2449555
+            },
+            {
+              "poi": 11,
+              "center": true,
+              "latitude": 32.9084792,
+              "longitude": -117.2460076
+            },
+            {
+              "poi": 12,
+              "center": true,
+              "latitude": 32.9095759,
+              "longitude": -117.2467371
+            },
+            {
+              "poi": 2,
+              "latitude": 32.907410,
+              "longitude": -117.245086
+            },
+            {
+              "poi": 2,
+              "latitude": 32.905485,
+              "longitude": -117.244828
+            },
+            {
+              "poi": 2,
+              "latitude": 32.905462,
+              "longitude": -117.245146
+            }
+          ]
         },
         {
           "hole": 10,
-          "par": 4,
+          "par": 5,
+          "handicap": 12,
           "yardage": {
-            "black": 454,
-            "brown": 371,
-            "green": 352,
-            "white": 308,
-            "yellow": 294
+            "black": 536,
+            "brown": 524,
+            "green": 506,
+            "white": 460,
+            "yellow": 422
           },
-          "latitude": [32.894879, 32.893048, 32.891994],
-          "longitude": [-117.243363, -117.243589, -117.243449]
+          "poi": [
+            {
+              "poi": 1,
+              "center": false,
+              "latitude": 32.9030302,
+              "longitude": -117.2507678
+            },
+            {
+              "poi": 1,
+              "center": true,
+              "latitude": 32.903018,
+              "longitude": -117.250660
+            },
+            {
+              "poi": 1,
+              "center": false,
+              "latitude": 32.9030606,
+              "longitude": -117.250509
+            },
+            {
+              "poi": 11,
+              "center": true,
+              "latitude": 32.9040757,
+              "longitude": -117.2467398
+            },
+            {
+              "poi": 12,
+              "center": true,
+              "latitude": 32.9043335,
+              "longitude": -117.2456656
+            },
+            {
+              "poi": 2,
+              "latitude": 32.903643,
+              "longitude": -117.248447
+            },
+            {
+              "poi": 2,
+              "latitude": 32.902988,
+              "longitude": -117.250447
+            },
+            {
+              "poi": 2,
+              "latitude": 32.903180,
+              "longitude": -117.250654
+            }
+          ]
         },
         {
           "hole": 11,
-          "par": 3,
+          "par": 4,
+          "handicap": 18,
           "yardage": {
-            "black": 225,
-            "brown": 202,
-            "green": 190,
-            "white": 171,
-            "yellow": 104
+            "black": 339,
+            "brown": 337,
+            "green": 321,
+            "white": 310,
+            "yellow": 258
           },
-          "latitude": [32.89125, 32.890732],
-          "longitude": [-117.243328, -117.244995]
+          "poi": [
+            {
+              "poi": 1,
+              "center": false,
+              "latitude": 32.9043015,
+              "longitude": -117.2480548
+            },
+            {
+              "poi": 1,
+              "center": true,
+              "latitude": 32.904287,
+              "longitude": -117.248165
+            },
+            {
+              "poi": 1,
+              "center": false,
+              "latitude": 32.9042913,
+              "longitude": -117.2482814
+            },
+            {
+              "poi": 11,
+              "center": true,
+              "latitude": 32.903721,
+              "longitude": -117.2505553
+            },
+            {
+              "poi": 12,
+              "center": true,
+              "latitude": 32.9033573,
+              "longitude": -117.2512044
+            },
+            {
+              "poi": 2,
+              "latitude": 32.904103,
+              "longitude": -117.249064
+            },
+            {
+              "poi": 2,
+              "latitude": 32.904196,
+              "longitude": -117.248433
+            },
+            {
+              "poi": 2,
+              "latitude": 32.904433,
+              "longitude": -117.248592
+            },
+            {
+              "poi": 2,
+              "latitude": 32.904408,
+              "longitude": -117.248307
+            }
+          ]
         },
         {
           "hole": 12,
-          "par": 4,
+          "par": 3,
+          "handicap": 14,
           "yardage": {
-            "black": 505,
-            "brown": 458,
-            "green": 444,
-            "white": 411,
-            "yellow": 370
+            "black": 203,
+            "brown": 174,
+            "green": 155,
+            "white": 108,
+            "yellow": 101
           },
-          "latitude": [32.890347, 32.89114, 32.891881],
-          "longitude": [-117.245614, -117.248011, -117.249458]
+          "poi": [
+            {
+              "poi": 1,
+              "center": false,
+              "latitude": 32.9049117,
+              "longitude": -117.2468169
+            },
+            {
+              "poi": 1,
+              "center": true,
+              "latitude": 32.904887,
+              "longitude": -117.246954
+            },
+            {
+              "poi": 1,
+              "center": false,
+              "latitude": 32.9048611,
+              "longitude": -117.2470785
+            },
+            {
+              "poi": 11,
+              "center": true,
+              "latitude": 32.9045599,
+              "longitude": -117.2478315
+            },
+            {
+              "poi": 12,
+              "center": true,
+              "latitude": 32.9047693,
+              "longitude": -117.2489044
+            },
+            {
+              "poi": 2,
+              "latitude": 32.904804,
+              "longitude": -117.246772
+            }
+          ]
         },
         {
           "hole": 13,
-          "par": 5,
+          "par": 4,
+          "handicap": 4,
           "yardage": {
-            "black": 621,
-            "brown": 539,
-            "green": 514,
-            "white": 486,
-            "yellow": 407
+            "black": 459,
+            "brown": 430,
+            "green": 399,
+            "white": 383,
+            "yellow": 306
           },
-          "latitude": [32.89246, 32.891989, 32.891507],
-          "longitude": [-117.24987, -117.247171, -117.245101]
+          "poi": [
+            {
+              "poi": 1,
+              "center": false,
+              "latitude": 32.9078257,
+              "longitude": -117.2482077
+            },
+            {
+              "poi": 1,
+              "center": true,
+              "latitude": 32.907716,
+              "longitude": -117.248178
+            },
+            {
+              "poi": 1,
+              "center": false,
+              "latitude": 32.9076095,
+              "longitude": -117.248158
+            },
+            {
+              "poi": 11,
+              "center": true,
+              "latitude": 32.9055529,
+              "longitude": -117.246764
+            },
+            {
+              "poi": 12,
+              "center": true,
+              "latitude": 32.9044326,
+              "longitude": -117.2460384
+            },
+            {
+              "poi": 2,
+              "latitude": 32.906631,
+              "longitude": -117.247452
+            }
+          ]
         },
         {
           "hole": 14,
           "par": 4,
+          "handicap": 6,
           "yardage": {
-            "black": 437,
-            "brown": 414,
-            "green": 394,
-            "white": 359,
-            "yellow": 277
+            "black": 451,
+            "brown": 408,
+            "green": 352,
+            "white": 340,
+            "yellow": 292
           },
-          "latitude": [32.891567, 32.893556, 32.894483],
-          "longitude": [-117.243979, -117.244873, -117.245643]
+          "poi": [
+            {
+              "poi": 1,
+              "center": false,
+              "latitude": 32.9064937,
+              "longitude": -117.2515712
+            },
+            {
+              "poi": 1,
+              "center": true,
+              "latitude": 32.906545,
+              "longitude": -117.251462
+            },
+            {
+              "poi": 1,
+              "center": false,
+              "latitude": 32.9066142,
+              "longitude": -117.2513619
+            },
+            {
+              "poi": 11,
+              "center": true,
+              "latitude": 32.9075853,
+              "longitude": -117.2500899
+            },
+            {
+              "poi": 12,
+              "center": true,
+              "latitude": 32.9080829,
+              "longitude": -117.2480031
+            },
+            {
+              "poi": 2,
+              "latitude": 32.906809,
+              "longitude": -117.251311
+            }
+          ]
         },
         {
           "hole": 15,
-          "par": 4,
+          "par": 3,
+          "handicap": 16,
           "yardage": {
-            "black": 517,
-            "brown": 394,
-            "green": 355,
-            "white": 339,
-            "yellow": 276
+            "black": 202,
+            "brown": 177,
+            "green": 165,
+            "white": 145,
+            "yellow": 141
           },
-          "latitude": [32.894387, 32.896012, 32.897059],
-          "longitude": [-117.244394, -117.244806, -117.245112]
+          "poi": [
+            {
+              "poi": 1,
+              "center": false,
+              "latitude": 32.9056245,
+              "longitude": -117.2526735
+            },
+            {
+              "poi": 1,
+              "center": true,
+              "latitude": 32.905734,
+              "longitude": -117.252646
+            },
+            {
+              "poi": 1,
+              "center": false,
+              "latitude": 32.9058587,
+              "longitude": -117.2526239
+            },
+            {
+              "poi": 11,
+              "center": true,
+              "latitude": 32.9069029,
+              "longitude": -117.2524422
+            },
+            {
+              "poi": 12,
+              "center": true,
+              "latitude": 32.9073713,
+              "longitude": -117.252461
+            },
+            {
+              "poi": 2,
+              "latitude": 32.905745,
+              "longitude": -117.252458
+            },
+            {
+              "poi": 2,
+              "latitude": 32.905884,
+              "longitude": -117.252523
+            },
+            {
+              "poi": 2,
+              "latitude": 32.905790,
+              "longitude": -117.252793
+            }
+          ]
         },
         {
           "hole": 16,
-          "par": 3,
+          "par": 4,
+          "handicap": 8,
           "yardage": {
-            "black": 227,
-            "brown": 204,
-            "green": 183,
-            "white": 151,
-            "yellow": 142
+            "black": 393,
+            "brown": 388,
+            "green": 345,
+            "white": 336,
+            "yellow": 300
           },
-          "latitude": [32.896984, 32.895908],
-          "longitude": [-117.245799, -117.247242]
+          "poi": [
+            {
+              "poi": 1,
+              "center": false,
+              "latitude": 32.9083774,
+              "longitude": -117.2531885
+            },
+            {
+              "poi": 1,
+              "center": true,
+              "latitude": 32.908247,
+              "longitude": -117.253205
+            },
+            {
+              "poi": 1,
+              "center": false,
+              "latitude": 32.9081083,
+              "longitude": -117.2532462
+            },
+            {
+              "poi": 11,
+              "center": true,
+              "latitude": 32.9064477,
+              "longitude": -117.253168
+            },
+            {
+              "poi": 12,
+              "center": true,
+              "latitude": 32.905133,
+              "longitude": -117.2528995
+            },
+            {
+              "poi": 2,
+              "latitude": 32.908371,
+              "longitude": -117.253020
+            }
+          ]
         },
         {
           "hole": 17,
-          "par": 3,
+          "par": 5,
+          "handicap": 10,
           "yardage": {
-            "black": 443,
-            "brown": 422,
-            "green": 398,
-            "white": 375,
-            "yellow": 346
+            "black": 520,
+            "brown": 520,
+            "green": 486,
+            "white": 472,
+            "yellow": 404
           },
-          "latitude": [32.896476, 32.897863, 32.898871],
-          "longitude": [-117.247365, -117.246222, -117.245243]
+          "poi": [
+            {
+              "poi": 1,
+              "center": false,
+              "latitude": 32.9091205,
+              "longitude": -117.2477074
+            },
+            {
+              "poi": 1,
+              "center": true,
+              "latitude": 32.909034,
+              "longitude": -117.247836
+            },
+            {
+              "poi": 1,
+              "center": false,
+              "latitude": 32.9089189,
+              "longitude": -117.2479703
+            },
+            {
+              "poi": 11,
+              "center": true,
+              "latitude": 32.9082383,
+              "longitude": -117.2511333
+            },
+            {
+              "poi": 12,
+              "center": true,
+              "latitude": 32.9085963,
+              "longitude": -117.2526514
+            },
+            {
+              "poi": 2,
+              "latitude": 32.908455,
+              "longitude": -117.249991
+            },
+            {
+              "poi": 2,
+              "latitude": 32.908490,
+              "longitude": -117.249687
+            },
+            {
+              "poi": 2,
+              "latitude": 32.908642,
+              "longitude": -117.248088
+            },
+            {
+              "poi": 2,
+              "latitude": 32.908951,
+              "longitude": -117.248035
+            }
+          ]
         },
         {
           "hole": 18,
-          "par": 5,
+          "par": 4,
+          "handicap": 2,
           "yardage": {
-            "black": 570,
-            "brown": 522,
-            "green": 491,
-            "white": 473,
-            "yellow": 414
+            "black": 486,
+            "brown": 455,
+            "green": 422,
+            "white": 373,
+            "yellow": 342
           },
-          "latitude": [32.899399, 32.901322, 32.903178],
-          "longitude": [-117.244808, -117.245316, -117.245407]
+          "poi": [
+            {
+              "poi": 1,
+              "center": false,
+              "latitude": 32.904798,
+              "longitude": -117.245905
+            },
+            {
+              "poi": 1,
+              "center": true,
+              "latitude": 32.904925,
+              "longitude": -117.245915
+            },
+            {
+              "poi": 1,
+              "center": false,
+              "latitude": 32.9050581,
+              "longitude": -117.2459747
+            },
+            {
+              "poi": 11,
+              "center": true,
+              "latitude": 32.9074783,
+              "longitude": -117.2472816
+            },
+            {
+              "poi": 12,
+              "center": true,
+              "latitude": 32.9086188,
+              "longitude": -117.2476759
+            },
+            {
+              "poi": 2,
+              "latitude": 32.905052,
+              "longitude": -117.245791
+            },
+            {
+              "poi": 2,
+              "latitude": 32.904902,
+              "longitude": -117.246086
+            },
+            {
+              "poi": 2,
+              "latitude": 32.904899,
+              "longitude": -117.245714
+            }
+          ]
         }
       ]
     },
@@ -1505,7 +2275,27 @@
             "yellow": 350
           },
           "latitude": [32.904263, 32.903545, 32.903068],
-          "longitude": [-117.245751, -117.248181, -117.250229]
+          "longitude": [-117.245751, -117.248181, -117.250229],
+          "poi": [
+            {
+              "poi": 1,
+              "center": false,
+              "latitude": 33.0922305,
+              "longitude": -117.2898292
+            },
+            {
+              "poi": 1,
+              "center": true,
+              "latitude": 33.0920856,
+              "longitude": -117.2897447
+            },
+            {
+              "poi": 1,
+              "center": false,
+              "latitude": 33.0920081,
+              "longitude": -117.2895993
+            }
+          ]
         },
         {
           "hole": 2,
@@ -1518,7 +2308,27 @@
             "yellow": 283
           },
           "latitude": [32.90256, 32.900725, 32.899746],
-          "longitude": [-117.250149, -117.249812, -117.249988]
+          "longitude": [-117.250149, -117.249812, -117.249988],
+          "poi": [
+            {
+              "poi": 1,
+              "center": false,
+              "latitude": 33.0965672,
+              "longitude": -117.2906733
+            },
+            {
+              "poi": 1,
+              "center": true,
+              "latitude": 33.0964239,
+              "longitude": -117.2906827
+            },
+            {
+              "poi": 1,
+              "center": false,
+              "latitude": 33.0962914,
+              "longitude": -117.2906989
+            }
+          ]
         },
         {
           "hole": 3,
@@ -1531,7 +2341,27 @@
             "yellow": 106
           },
           "latitude": [32.899272, 32.897957],
-          "longitude": [-117.250003, -117.250631]
+          "longitude": [-117.250003, -117.250631],
+          "poi": [
+            {
+              "poi": 1,
+              "center": false,
+              "latitude": 33.0979057,
+              "longitude": -117.2914015
+            },
+            {
+              "poi": 1,
+              "center": true,
+              "latitude": 33.0977534,
+              "longitude": -117.2913009
+            },
+            {
+              "poi": 1,
+              "center": false,
+              "latitude": 33.0976357,
+              "longitude": -117.2911756
+            }
+          ]
         },
         {
           "hole": 4,
@@ -1544,7 +2374,27 @@
             "yellow": 353
           },
           "latitude": [32.898259, 32.900576, 32.902056],
-          "longitude": [-117.2514, -117.251706, -117.251864]
+          "longitude": [-117.2514, -117.251706, -117.251864],
+          "poi": [
+            {
+              "poi": 1,
+              "center": false,
+              "latitude": 33.101757,
+              "longitude": -117.2921734
+            },
+            {
+              "poi": 1,
+              "center": true,
+              "latitude": 33.1016542,
+              "longitude": -117.292325
+            },
+            {
+              "poi": 1,
+              "center": false,
+              "latitude": 33.1015338,
+              "longitude": -117.2923962
+            }
+          ]
         },
         {
           "hole": 5,
@@ -1557,7 +2407,27 @@
             "yellow": 320
           },
           "latitude": [32.902245, 32.900435, 32.899155],
-          "longitude": [-117.251195, -117.25079, -117.250786]
+          "longitude": [-117.251195, -117.25079, -117.250786],
+          "poi": [
+            {
+              "poi": 1,
+              "center": false,
+              "latitude": 33.1054649,
+              "longitude": -117.290876
+            },
+            {
+              "poi": 1,
+              "center": true,
+              "latitude": 33.1055273,
+              "longitude": -117.2910557
+            },
+            {
+              "poi": 1,
+              "center": false,
+              "latitude": 33.1055267,
+              "longitude": -117.2912502
+            }
+          ]
         },
         {
           "hole": 6,
@@ -1570,7 +2440,27 @@
             "yellow": 431
           },
           "latitude": [32.899698, 32.901295, 32.90233],
-          "longitude": [-117.249521, -117.248423, -117.24676]
+          "longitude": [-117.249521, -117.248423, -117.24676],
+          "poi": [
+            {
+              "poi": 1,
+              "center": false,
+              "latitude": 33.1045684,
+              "longitude": -117.2889896
+            },
+            {
+              "poi": 1,
+              "center": true,
+              "latitude": 33.1046734,
+              "longitude": -117.2890929
+            },
+            {
+              "poi": 1,
+              "center": false,
+              "latitude": 33.1048279,
+              "longitude": -117.2892042
+            }
+          ]
         },
         {
           "hole": 7,
@@ -1583,7 +2473,27 @@
             "yellow": 378
           },
           "latitude": [32.902899, 32.90042, 32.899376],
-          "longitude": [-117.24612, -117.2464, -117.247157]
+          "longitude": [-117.24612, -117.2464, -117.247157],
+          "poi": [
+            {
+              "poi": 1,
+              "center": false,
+              "latitude": 33.1006366,
+              "longitude": -117.2876856
+            },
+            {
+              "poi": 1,
+              "center": true,
+              "latitude": 33.1007119,
+              "longitude": -117.2876347
+            },
+            {
+              "poi": 1,
+              "center": false,
+              "latitude": 33.100845,
+              "longitude": -117.2875797
+            }
+          ]
         },
         {
           "hole": 8,
@@ -1596,7 +2506,27 @@
             "yellow": 90
           },
           "latitude": [32.89906, 32.899415],
-          "longitude": [-117.247016, -117.245612]
+          "longitude": [-117.247016, -117.245612],
+          "poi": [
+            {
+              "poi": 1,
+              "center": false,
+              "latitude": 33.0965038,
+              "longitude": -117.2874418
+            },
+            {
+              "poi": 1,
+              "center": true,
+              "latitude": 33.0966043,
+              "longitude": -117.2874807
+            },
+            {
+              "poi": 1,
+              "center": false,
+              "latitude": 33.0967543,
+              "longitude": -117.2875035
+            }
+          ]
         },
         {
           "hole": 9,
@@ -1609,7 +2539,27 @@
             "yellow": 432
           },
           "latitude": [32.900003, 32.89653, 32.895125],
-          "longitude": [-117.244425, -117.244104, -117.243967]
+          "longitude": [-117.244425, -117.244104, -117.243967],
+          "poi": [
+            {
+              "poi": 1,
+              "center": false,
+              "latitude": 33.0941186,
+              "longitude": -117.2855703
+            },
+            {
+              "poi": 1,
+              "center": true,
+              "latitude": 33.0942439,
+              "longitude": -117.2854885
+            },
+            {
+              "poi": 1,
+              "center": false,
+              "latitude": 33.0944432,
+              "longitude": -117.2854784
+            }
+          ]
         },
         {
           "hole": 10,
@@ -1622,7 +2572,27 @@
             "yellow": 294
           },
           "latitude": [32.894879, 32.893048, 32.891994],
-          "longitude": [-117.243363, -117.243589, -117.243449]
+          "longitude": [-117.243363, -117.243589, -117.243449],
+          "poi": [
+            {
+              "poi": 1,
+              "center": false,
+              "latitude": 33.0970936,
+              "longitude": -117.2818731
+            },
+            {
+              "poi": 1,
+              "center": true,
+              "latitude": 33.0969095,
+              "longitude": -117.2817787
+            },
+            {
+              "poi": 1,
+              "center": false,
+              "latitude": 33.096735,
+              "longitude": -117.2818208
+            }
+          ]
         },
         {
           "hole": 11,
@@ -1635,7 +2605,27 @@
             "yellow": 104
           },
           "latitude": [32.89125, 32.890732],
-          "longitude": [-117.243328, -117.244995]
+          "longitude": [-117.243328, -117.244995],
+          "poi": [
+            {
+              "poi": 1,
+              "center": false,
+              "latitude": 33.0989375,
+              "longitude": -117.2814272
+            },
+            {
+              "poi": 1,
+              "center": true,
+              "latitude": 33.0988156,
+              "longitude": -117.2815023
+            },
+            {
+              "poi": 1,
+              "center": false,
+              "latitude": 33.098691,
+              "longitude": -117.2815847
+            }
+          ]
         },
         {
           "hole": 12,
@@ -1648,7 +2638,27 @@
             "yellow": 370
           },
           "latitude": [32.890347, 32.89114, 32.891881],
-          "longitude": [-117.245614, -117.248011, -117.249458]
+          "longitude": [-117.245614, -117.248011, -117.249458],
+          "poi": [
+            {
+              "poi": 1,
+              "center": false,
+              "latitude": 33.10333,
+              "longitude": -117.281863
+            },
+            {
+              "poi": 1,
+              "center": true,
+              "latitude": 33.1031252,
+              "longitude": -117.281702
+            },
+            {
+              "poi": 1,
+              "center": false,
+              "latitude": 33.1029423,
+              "longitude": -117.2816074
+            }
+          ]
         },
         {
           "hole": 13,
@@ -1661,7 +2671,27 @@
             "yellow": 407
           },
           "latitude": [32.89246, 32.891989, 32.891507],
-          "longitude": [-117.24987, -117.247171, -117.245101]
+          "longitude": [-117.24987, -117.247171, -117.245101],
+          "poi": [
+            {
+              "poi": 1,
+              "center": false,
+              "latitude": 33.1065558,
+              "longitude": -117.283286
+            },
+            {
+              "poi": 1,
+              "center": true,
+              "latitude": 33.1064081,
+              "longitude": -117.283345
+            },
+            {
+              "poi": 1,
+              "center": false,
+              "latitude": 33.1062399,
+              "longitude": -117.2833038
+            }
+          ]
         },
         {
           "hole": 14,
@@ -1674,7 +2704,27 @@
             "yellow": 277
           },
           "latitude": [32.891567, 32.893556, 32.894483],
-          "longitude": [-117.243979, -117.244873, -117.245643]
+          "longitude": [-117.243979, -117.244873, -117.245643],
+          "poi": [
+            {
+              "poi": 1,
+              "center": false,
+              "latitude": 33.1070378,
+              "longitude": -117.2809143
+            },
+            {
+              "poi": 1,
+              "center": true,
+              "latitude": 33.107181,
+              "longitude": -117.2810095
+            },
+            {
+              "poi": 1,
+              "center": false,
+              "latitude": 33.1072854,
+              "longitude": -117.2811401
+            }
+          ]
         },
         {
           "hole": 15,
@@ -1687,7 +2737,27 @@
             "yellow": 276
           },
           "latitude": [32.894387, 32.896012, 32.897059],
-          "longitude": [-117.244394, -117.244806, -117.245112]
+          "longitude": [-117.244394, -117.244806, -117.245112],
+          "poi": [
+            {
+              "poi": 1,
+              "center": false,
+              "latitude": 33.1034043,
+              "longitude": -117.2817407
+            },
+            {
+              "poi": 1,
+              "center": true,
+              "latitude": 33.1035701,
+              "longitude": -117.2817903
+            },
+            {
+              "poi": 1,
+              "center": false,
+              "latitude": 33.103747,
+              "longitude": -117.2818265
+            }
+          ]
         },
         {
           "hole": 16,
@@ -1700,7 +2770,27 @@
             "yellow": 142
           },
           "latitude": [32.896984, 32.895908],
-          "longitude": [-117.245799, -117.247242]
+          "longitude": [-117.245799, -117.247242],
+          "poi": [
+            {
+              "poi": 1,
+              "center": false,
+              "latitude": 33.1000357,
+              "longitude": -117.2812946
+            },
+            {
+              "poi": 1,
+              "center": true,
+              "latitude": 33.1002273,
+              "longitude": -117.2814448
+            },
+            {
+              "poi": 1,
+              "center": false,
+              "latitude": 33.1004761,
+              "longitude": -117.2816098
+            }
+          ]
         },
         {
           "hole": 17,
@@ -1713,7 +2803,27 @@
             "yellow": 346
           },
           "latitude": [32.896476, 32.897863, 32.898871],
-          "longitude": [-117.247365, -117.246222, -117.245243]
+          "longitude": [-117.247365, -117.246222, -117.245243],
+          "poi": [
+            {
+              "poi": 1,
+              "center": false,
+              "latitude": 33.0942126,
+              "longitude": -117.2813493
+            },
+            {
+              "poi": 1,
+              "center": true,
+              "latitude": 33.0943266,
+              "longitude": -117.2814163
+            },
+            {
+              "poi": 1,
+              "center": false,
+              "latitude": 33.0945008,
+              "longitude": -117.2814472
+            }
+          ]
         },
         {
           "hole": 18,
@@ -1726,7 +2836,27 @@
             "yellow": 414
           },
           "latitude": [32.899399, 32.901322, 32.903178],
-          "longitude": [-117.244808, -117.245316, -117.245407]
+          "longitude": [-117.244808, -117.245316, -117.245407],
+          "poi": [
+            {
+              "poi": 1,
+              "center": false,
+              "latitude": 33.0931562,
+              "longitude": -117.2843955
+            },
+            {
+              "poi": 1,
+              "center": true,
+              "latitude": 33.0930995,
+              "longitude": -117.2841863
+            },
+            {
+              "poi": 1,
+              "center": false,
+              "latitude": 33.0930518,
+              "longitude": -117.2839543
+            }
+          ]
         }
       ]
     }

@@ -22,29 +22,29 @@ export const POI_PATH = [
     POI.ONE_HUNDRED_MARKER,
     POI.GREEN
 ]
-import tpNorth from '../../../static/lib/aviara.json' with {type: "json"};
-import data from '../../../static/lib/data.json' with {type: "json"};
-import fs from 'fs'
+// import tpNorth from '../../../static/lib/aviara.json' with {type: "json"};
+// import data from '../../../static/lib/data.json' with {type: "json"};
+// import fs from 'fs'
 
-function parseAPIData() {
-//load tp south data
+// function parseAPIData() {
+// //load tp south data
 
-    const tpSouthHoles = tpNorth.coordinates.reduce((acc, hole) => {
-        console.log(acc, hole)
-        if (!acc[hole.hole]) acc[hole.hole] = []
-        acc[hole.hole].push({
-            poi: hole.poi,
-            center: hole.location === 2 && hole.sideFW === 2,
-            latitude: hole.latitude,
-            longitude: hole.longitude
-        });
-        return acc;
-    }, {});
-    // for each hole in data, add the hole data to the hole
-    data.courses[2].holes.forEach((hole, index) => {
-        hole.poi = tpSouthHoles[hole.hole]
-    })
-    fs.writeFileSync('data.json', JSON.stringify(data), {flag: 'w'})
-}
+//     const tpSouthHoles = tpNorth.coordinates.reduce((acc, hole) => {
+//         console.log(acc, hole)
+//         if (!acc[hole.hole]) acc[hole.hole] = []
+//         acc[hole.hole].push({
+//             poi: hole.poi,
+//             center: hole.location === 2 && hole.sideFW === 2,
+//             latitude: hole.latitude,
+//             longitude: hole.longitude
+//         });
+//         return acc;
+//     }, {});
+//     // for each hole in data, add the hole data to the hole
+//     data.courses[2].holes.forEach((hole, index) => {
+//         hole.poi = tpSouthHoles[hole.hole]
+//     })
+//     fs.writeFileSync('data.json', JSON.stringify(data), {flag: 'w'})
+// }
 
-parseAPIData()
+// parseAPIData()

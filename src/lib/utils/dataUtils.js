@@ -22,7 +22,7 @@ export const POI_PATH = [
     POI.ONE_HUNDRED_MARKER,
     POI.GREEN
 ]
-import tpNorth from '../../../static/lib/tp north.json' with {type: "json"};
+import tpNorth from '../../../static/lib/aviara.json' with {type: "json"};
 import data from '../../../static/lib/data.json' with {type: "json"};
 import fs from 'fs'
 
@@ -41,7 +41,7 @@ function parseAPIData() {
         return acc;
     }, {});
     // for each hole in data, add the hole data to the hole
-    data.courses[1].holes.forEach((hole, index) => {
+    data.courses[2].holes.forEach((hole, index) => {
         hole.poi = tpSouthHoles[hole.hole]
     })
     fs.writeFileSync('data.json', JSON.stringify(data), {flag: 'w'})

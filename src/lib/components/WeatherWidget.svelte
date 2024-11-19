@@ -10,9 +10,9 @@
     async function fetchWeather() {
         try {
             const url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=imperial&appid=${API_KEY}`
-            // const response = await fetch(url);
-            // if (!response.ok) throw new Error('Weather data not available');
-            // weather = await response.json();
+            const response = await fetch(url);
+            if (!response.ok) throw new Error('Weather data not available');
+            weather = await response.json();
         } catch (e) {
             error = e.message;
         }

@@ -60,7 +60,7 @@
             <div class="hero-overlay bg-opacity-60"></div>
             <div class="hero-content text-neutral-content text-center">
                 <div class="max-w-md">
-                <h1 class="text-5xl font-bold">{$courseStore.selectedCourse.name}</h1>
+                <h1 class="text-4xl sm:text-5xl font-bold">{$courseStore.selectedCourse.name}</h1>
                 </div>
             </div>
         </div>

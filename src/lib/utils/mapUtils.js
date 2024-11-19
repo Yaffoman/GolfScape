@@ -85,10 +85,9 @@ export async function flyToCourse(course) {
         const Marker = window.google.maps.maps3d.Marker3DInteractiveElement;
         const {PinElement} = await window.google.maps.importLibrary("marker");
         for (const holeData of course.holes) {
-            if (holeData.latitude?.[0] && holeData.longitude?.[0]) {
-                const {latitude, longitude} = holeData.poi.find((p) => {
-                    return p.poi === POI.BACK_TEE;
-                });
+            const latitude = holeData.poi.find((p) => p.poi === POI.BACK_TEE)?.latitude;
+            const longitude = holeData.poi.find((p) => p.poi === POI.BACK_TEE)?.longitude;
+            if (latitude && longitude) {
                 let holeMarker = new Marker({
                     position: {lat: latitude, lng: longitude},
                     altitudeMode: "RELATIVE_TO_GROUND",
@@ -161,6 +160,7 @@ export async function flyThroughHole(hole) {
                     if (poi.center) {
                         markerOptions.label =  Math.round(convertMetersToYards(calculateDistance(tee.latitude, tee.longitude, latitude, longitude))) + " yds"
                         markerOptions.position.altitude = 5;
+                        markerOptions.extruded = true;
                         let holeMarker = new Marker(markerOptions);
                         pinScaled.background = "#008000";
                         pinScaled.borderColor = "#008000";

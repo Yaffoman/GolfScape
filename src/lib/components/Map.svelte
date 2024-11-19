@@ -9,7 +9,6 @@
     onMount(async () => {
         console.log("calling on mount!!")
         const {Map3DElement} = await google.maps.importLibrary("maps3d");
-        const {AdvancedMarkerElement} = await google.maps.importLibrary("marker");
 
         mapObject = new Map3DElement({
             center: {lat: 37.36353, lng: -121.9286, altitude: 10000},

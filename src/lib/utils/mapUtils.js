@@ -28,6 +28,11 @@ export function calculateHeading(latA, lonA, latB, lonB) {
     return (heading + 360) % 360;
 }
 
+export function convertMetersToYards(meters) {
+    return meters * 1.09361;
+
+}
+
 export function calculateDistance(lat1, lng1, lat2, lng2) {
     const R = 6371000;
     const dLat = toRadians(lat2 - lat1);
@@ -137,13 +142,11 @@ export async function flyThroughHole(hole) {
                     icon = flagURL;
                     break;
                 case POI.GREEN_BUNKER:
-                    label = "Bunker";
-                    label = Math.round(calculateDistance(tee.latitude, tee.longitude, latitude, longitude)) + " yds"
+                    label = Math.round(convertMetersToYards(calculateDistance(tee.latitude, tee.longitude, latitude, longitude))) + " yds"
                     icon = bunkerURL;
                     break;
                 case POI.FAIRWAY_BUNKER:
-                    label = "Bunker";
-                    label = Math.round(calculateDistance(tee.latitude, tee.longitude, latitude, longitude)) + " yds"
+                    label = Math.round(convertMetersToYards(calculateDistance(tee.latitude, tee.longitude, latitude, longitude))) + " yds"
                     icon = bunkerURL;
                     break;
                 case POI.FAIRWAY:

@@ -22,14 +22,14 @@ export const POI_PATH = [
     POI.ONE_HUNDRED_MARKER,
     POI.GREEN
 ]
-// import tpSouth from '../../../static/lib/tp south.json' with {type: "json"};
-// import data from '../../../static/lib/data.json' with {type: "json"};
+import tpNorth from '../../../static/lib/tp north.json' with {type: "json"};
+import data from '../../../static/lib/data.json' with {type: "json"};
 import fs from 'fs'
 
 function parseAPIData() {
 //load tp south data
 
-    const tpSouthHoles = tpSouth.coordinates.reduce((acc, hole) => {
+    const tpSouthHoles = tpNorth.coordinates.reduce((acc, hole) => {
         console.log(acc, hole)
         if (!acc[hole.hole]) acc[hole.hole] = []
         acc[hole.hole].push({
@@ -41,10 +41,10 @@ function parseAPIData() {
         return acc;
     }, {});
     // for each hole in data, add the hole data to the hole
-    data.courses[0].holes.forEach((hole, index) => {
+    data.courses[1].holes.forEach((hole, index) => {
         hole.poi = tpSouthHoles[hole.hole]
     })
-    fs.writeFileSync('data2.json', JSON.stringify(data), {flag: 'w'})
+    fs.writeFileSync('data.json', JSON.stringify(data), {flag: 'w'})
 }
 
-// parseAPIData()
+parseAPIData()

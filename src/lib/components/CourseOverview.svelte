@@ -1,5 +1,8 @@
 <script>
     export let course;
+
+    let yardage = course.yardage.palmer ?? course.yardage.black;
+    let tees = course.yardage.palmer ? "Palmer" : "Black";
 </script>
 
 
@@ -22,8 +25,8 @@
         <div class="stats stats-horizontal lg:stats-vertical shadow bg-opacity-65 bg-accent text-neutral-content w-full mx-auto">
             <div class="stat">
               <div class="stat-title text-base-100">Length</div>
-              <div class="stat-value">{course.yardage.black}</div>
-              <div class="stat-desc text-base-100">Black Tees</div>
+              <div class="stat-value">{yardage}</div>
+              <div class="stat-desc text-base-100">{tees}</div>
             </div>
           
             <div class="stat">

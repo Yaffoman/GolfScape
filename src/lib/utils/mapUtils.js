@@ -205,13 +205,14 @@ export async function flyThroughHole(hole) {
     let range = 50;
     const tilt = 67.5;
     const altitudeOffset = course.altitude;
+    const holeAltitude = hole.altitude ?? 0;
     const path = []
     const altitude = 60;
     POI_PATH.forEach((poi) => {
         const {longitude, latitude} = hole.poi.find((p) => {
-            return p.poi === poi;
+            return p.poi === poi && (p.poi === POI.GREEN ? p.center : true);
         }) || {longitude: null, latitude: null};
-        if (!longitude || !latitude) return;
+        if (!longitude || !latitude ) return;
         path.push({longitude: longitude, latitude: latitude})
     });
     // for (let step = 0; step < path.length - 1; step++) {
@@ -253,22 +254,22 @@ export async function flyThroughHole(hole) {
             );
     await flyToPoint({
         endCamera: {
-            center: {lng: path.at(0).longitude, lat: path.at(0).latitude, altitude: 50 + altitudeOffset},
+            center: {lng: path.at(0).longitude, lat: path.at(0).latitude, altitude: 50 + altitudeOffset + holeAltitude},
             heading: heading,
             tilt: 80,
             range: 50,
         },
-        durationMillis: 3000,
+        durationMillis: 4000,
     });
 
     await flyToPoint({
         endCamera: {
-            center: {lng: path.at(-1).longitude, lat: path.at(-1).latitude, altitude: 80 + altitudeOffset},
+            center: {lng: path.at(-1).longitude, lat: path.at(-1).latitude, altitude: 80 + altitudeOffset + holeAltitude},
             heading: heading,
             tilt: 0,
             range: 50,
         },
-        durationMillis: 5000,
+        durationMillis: 6500,
     });
 
     mapObject.flyCameraAround({
@@ -276,13 +277,13 @@ export async function flyThroughHole(hole) {
             center: {
                 lat: path.at(-1).latitude,
                 lng: path.at(-1).longitude,
-                altitude: 80 + altitudeOffset,
+                altitude: 80 + altitudeOffset + holeAltitude,
             },
             range: 50,
             tilt: 0,
             heading: heading,
         },
-        durationMillis: 8000,
+        durationMillis: 4500,
         rounds: 1,
     });
 

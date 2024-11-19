@@ -28,6 +28,26 @@
         flyThroughHole($courseStore.selectedCourse.holes[nextHoleIndex - 1])
     }
 
+    function getTeeColor(colorKey) {
+        switch (colorKey.toLowerCase()) {
+            case 'black':
+                return 'bg-black';
+            case 'brown':
+                return 'bg-amber-800';
+            case 'green':
+                return 'bg-green-600';
+            case 'white':
+                return 'bg-white';
+            case 'yellow':
+            case 'gold':
+                return 'bg-yellow-400';
+            case 'blue':
+                return 'bg-blue-600';
+            default:
+                return 'bg-gray-400';
+        }
+    }
+
 </script>
 
 <div class="h-100vh w-screen">
@@ -71,7 +91,7 @@
                         {#each $courseStore.selectedCourse.holes.slice(0, 9) as hole, index}
                             <button 
                                 class="btn btn-sm h-[42px] w-14 my-0.5 text-neutral-content bg-primary hover:bg-primary-focus transition-colors"
-                                class:bg-error={$courseStore.selectedHole?.hole === (index + 1)}
+                                class:!bg-error={$courseStore.selectedHole?.hole === (index + 1)}
                                 class:shadow-lg={$courseStore.selectedHole?.hole === (index + 1)}
                                 on:click={() => handleHoleSelection(hole)}>
                                 {index + 1}
@@ -85,7 +105,7 @@
                         {#each $courseStore.selectedCourse.holes.slice(9, 18) as hole, index}
                             <button 
                                 class="btn btn-sm h-[42px] w-14 my-0.5 text-neutral-content bg-primary hover:bg-primary-focus transition-colors"
-                                class:bg-error={$courseStore.selectedHole?.hole === (index + 10)}
+                                class:!bg-error={$courseStore.selectedHole?.hole === (index + 10)}
                                 class:shadow-lg={$courseStore.selectedHole?.hole === (index + 10)}
                                 on:click={() => handleHoleSelection(hole)}>
                                 {index + 10}
@@ -120,26 +140,12 @@
         
                     <h2 class="font-semibold text-lg mb-2">Total Yardage</h2>
                     <div class="grid grid-cols-2 gap-2 mb-4">
-                        <div class="flex items-center gap-2">
-                            <div class="w-3 h-3 rounded-full bg-black"></div>
-                            <p>Black: <span class="font-medium">{ $courseStore.selectedCourse.yardage.black }</span></p>
-                        </div>
-                        <div class="flex items-center gap-2">
-                            <div class="w-3 h-3 rounded-full bg-amber-800"></div>
-                            <p>Brown: <span class="font-medium">{ $courseStore.selectedCourse.yardage.brown }</span></p>
-                        </div>
-                        <div class="flex items-center gap-2">
-                            <div class="w-3 h-3 rounded-full bg-green-600"></div>
-                            <p>Green: <span class="font-medium">{ $courseStore.selectedCourse.yardage.green }</span></p>
-                        </div>
-                        <div class="flex items-center gap-2">
-                            <div class="w-3 h-3 rounded-full bg-white"></div>
-                            <p>White: <span class="font-medium">{ $courseStore.selectedCourse.yardage.white }</span></p>
-                        </div>
-                        <div class="flex items-center gap-2">
-                            <div class="w-3 h-3 rounded-full bg-yellow-400"></div>
-                            <p>Yellow: <span class="font-medium">{ $courseStore.selectedCourse.yardage.yellow }</span></p>
-                        </div>
+                        {#each Object.entries($courseStore.selectedCourse.yardage) as [color, yards]}
+                            <div class="flex items-center gap-2">
+                                <div class="w-3 h-3 rounded-full {getTeeColor(color)}"></div>
+                                <p>{color.charAt(0).toUpperCase() + color.slice(1)}: <span class="font-medium">{yards}</span></p>
+                            </div>
+                        {/each}
                     </div>
                     <WeatherWidget latitude={$courseStore.selectedCourse.latitude} longitude={$courseStore.selectedCourse.longitude} />
                 </div>
@@ -170,26 +176,12 @@
                         </div>
                         
                         <div class="grid grid-cols-2 gap-2">
-                            <div class="flex items-center gap-2">
-                                <div class="w-3 h-3 rounded-full bg-black"></div>
-                                <p>Black: <span class="font-medium">{ $courseStore.selectedHole.yardage.black }</span></p>
-                            </div>
-                            <div class="flex items-center gap-2">
-                                <div class="w-3 h-3 rounded-full bg-amber-800"></div>
-                                <p>Brown: <span class="font-medium">{ $courseStore.selectedHole.yardage.brown }</span></p>
-                            </div>
-                            <div class="flex items-center gap-2">
-                                <div class="w-3 h-3 rounded-full bg-green-600"></div>
-                                <p>Green: <span class="font-medium">{ $courseStore.selectedHole.yardage.green }</span></p>
-                            </div>
-                            <div class="flex items-center gap-2">
-                                <div class="w-3 h-3 rounded-full bg-white"></div>
-                                <p>White: <span class="font-medium">{ $courseStore.selectedHole.yardage.white }</span></p>
-                            </div>
-                            <div class="flex items-center gap-2">
-                                <div class="w-3 h-3 rounded-full bg-yellow-400"></div>
-                                <p>Yellow: <span class="font-medium">{ $courseStore.selectedHole.yardage.yellow }</span></p>
-                            </div>
+                            {#each Object.entries($courseStore.selectedHole.yardage) as [color, yards]}
+                                <div class="flex items-center gap-2">
+                                    <div class="w-3 h-3 rounded-full {getTeeColor(color)}"></div>
+                                    <p>{color.charAt(0).toUpperCase() + color.slice(1)}: <span class="font-medium">{yards}</span></p>
+                                </div>
+                            {/each}
                         </div>
                     </div>
                 </div>

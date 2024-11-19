@@ -48,6 +48,8 @@
         }
     }
 
+    let isOpen = true;
+
 </script>
 
 <div class="h-100vh w-screen">
@@ -79,9 +81,9 @@
             Back to courses
         </a>
     </div>
-    
-    <div class="w-full h-full flex flex-row">
-        <div class="min-w-52 h-[520px] flex flex-col items-center mt-4">
+           
+    <div class="w-full h-full flex-row flex p-4">
+        <div class="min-w-52 h-[520px] hidden lg:flex flex-col items-center">
             <div class="h-full bg-base-200 rounded p-4 shadow">
                 <h1 class="text-center text-xl font-bold text-secondary mb-4">Hole Selection</h1>
                 <div class="grid grid-cols-[1fr_auto_1fr] gap-1">
@@ -115,18 +117,30 @@
                 </div>
             </div>
         </div>
-        <div class="w-full h-[520px] flex flex-col p-4 bg-base-200 rounded shadow my-4">
-            <Map/>
-            <div class="w-fit join grid grid-cols-2 mx-auto mt-4">
-                <button class="join-item btn btn-outline btn-secondary" class:btn-disabled={!$courseStore.selectedHole} on:click={handlePrevHole}>Prev hole</button>
-                <button class="join-item btn btn-outline btn-primary" class:btn-disabled={!$courseStore.selectedHole} on:click={handleNextHole}>Next hole</button>
+        <div class="flex flex-col sm:flex-row w-full">
+            <!-- Map Container -->
+            <div class="w-full sm:w-2/3 h-[520px] flex flex-col p-4 bg-base-200 rounded shadow mb-4 sm:mr-4">
+                <Map/>
+                <div class="w-fit join grid grid-cols-2 mx-auto mt-4">
+                    <button class="join-item btn btn-outline btn-secondary" 
+                            class:btn-disabled={!$courseStore.selectedHole} 
+                            on:click={handlePrevHole}>
+                        Prev hole
+                    </button>
+                    <button class="join-item btn btn-outline btn-primary" 
+                            class:btn-disabled={!$courseStore.selectedHole} 
+                            on:click={handleNextHole}>
+                        Next hole
+                    </button>
+                </div>
             </div>
-        </div>
-        <div class="min-w-80 flex flex-col items-center mt-4">
-            <!-- Course Information Card -->
-            <!-- {#if !$courseStore.selectedHole} -->
-                <div class="p-4 bg-base-200 rounded shadow w-72 mb-4">
-                    <div class="flex flex-row items-center mb-4">
+
+            <!-- Right Column Container -->
+            <div class="flex flex-col sm:w-1/3">
+                <!-- Collapsible Course Information Card -->
+                <div class="collapse collapse-arrow bg-base-200 rounded shadow mb-4">
+                    <input type="checkbox" bind:checked={isOpen} /> 
+                    <div class="collapse-title p-4 flex flex-row items-center">
                         <h1 class="text-left text-2xl font-bold text-secondary">
                             Course
                         </h1>
@@ -137,55 +151,56 @@
                             </span>
                         </div>
                     </div>
-        
-                    <h2 class="font-semibold text-lg mb-2">Total Yardage</h2>
-                    <div class="grid grid-cols-2 gap-2 mb-4">
-                        {#each Object.entries($courseStore.selectedCourse.yardage) as [color, yards]}
-                            <div class="flex items-center gap-2">
-                                <div class="w-3 h-3 rounded-full {getTeeColor(color)}"></div>
-                                <p>{color.charAt(0).toUpperCase() + color.slice(1)}: <span class="font-medium">{yards}</span></p>
-                            </div>
-                        {/each}
-                    </div>
-                    <WeatherWidget latitude={$courseStore.selectedCourse.latitude} longitude={$courseStore.selectedCourse.longitude} />
-                </div>
-            <!-- {/if} -->
-    
-            <!-- Hole Information Card (Only shown when hole is selected) -->
-            {#if $courseStore.selectedHole}
-                <div class="p-4 bg-base-200 rounded shadow w-72">
-                    <div class="flex flex-row items-center mb-4">
-                        <h1 class="text-left text-2xl font-bold text-secondary">
-                            Hole { $courseStore.selectedHole.hole }
-                        </h1>
-                        <div class="divider divider-horizontal"></div>
-                        <div class="text-left">
-                            <span class="text-xl font-semibold text-primary">
-                                Par { $courseStore.selectedHole.par }
-                            </span>
-                        </div>
-                    </div>
-    
-                    <div class="space-y-2">
-                        <div class="flex flex-row">
-                            <h2 class="font-semibold text-lg">Yardage</h2>
-                            <div class="divider divider-horizontal mx-[0px]"></div>
-                            <h3 class="font-semibold text-lg">
-                                Handicap { $courseStore.selectedHole.handicap }
-                            </h3>
-                        </div>
-                        
-                        <div class="grid grid-cols-2 gap-2">
-                            {#each Object.entries($courseStore.selectedHole.yardage) as [color, yards]}
+                    <div class="collapse-content">
+                        <h2 class="font-semibold text-lg mb-2">Total Yardage</h2>
+                        <div class="grid grid-cols-2 gap-2 mb-4">
+                            {#each Object.entries($courseStore.selectedCourse.yardage) as [color, yards]}
                                 <div class="flex items-center gap-2">
                                     <div class="w-3 h-3 rounded-full {getTeeColor(color)}"></div>
                                     <p>{color.charAt(0).toUpperCase() + color.slice(1)}: <span class="font-medium">{yards}</span></p>
                                 </div>
                             {/each}
                         </div>
+                        <WeatherWidget latitude={$courseStore.selectedCourse.latitude} longitude={$courseStore.selectedCourse.longitude} />
                     </div>
                 </div>
-            {/if}
+
+                <!-- Hole Information Card -->
+                {#if $courseStore.selectedHole}
+                    <div class="p-4 bg-base-200 rounded shadow w-full mb-4">
+                        <div class="flex flex-row items-center mb-4">
+                            <h1 class="text-left text-2xl font-bold text-secondary">
+                                Hole { $courseStore.selectedHole.hole }
+                            </h1>
+                            <div class="divider divider-horizontal"></div>
+                            <div class="text-left">
+                                <span class="text-xl font-semibold text-primary">
+                                    Par { $courseStore.selectedHole.par }
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="space-y-2">
+                            <div class="flex flex-row">
+                                <h2 class="font-semibold text-lg">Yardage</h2>
+                                <div class="divider divider-horizontal mx-[0px]"></div>
+                                <h3 class="font-semibold text-lg">
+                                    Handicap { $courseStore.selectedHole.handicap }
+                                </h3>
+                            </div>
+                            
+                            <div class="grid grid-cols-2 gap-2">
+                                {#each Object.entries($courseStore.selectedHole.yardage) as [color, yards]}
+                                    <div class="flex items-center gap-2">
+                                        <div class="w-3 h-3 rounded-full {getTeeColor(color)}"></div>
+                                        <p>{color.charAt(0).toUpperCase() + color.slice(1)}: <span class="font-medium">{yards}</span></p>
+                                    </div>
+                                {/each}
+                            </div>
+                        </div>
+                    </div>
+                {/if}
+            </div>
         </div>
     </div>
 </div>

@@ -7,6 +7,7 @@
     import { courseStore } from "../../../lib/stores/courseStore";
     import Map from "../../../lib/components/Map.svelte";
     import { flyThroughHole } from "$lib";
+    import WeatherWidget from '$lib/components/WeatherWidget.svelte';
 
     console.log($courseStore.selectedCourse)
 
@@ -29,7 +30,7 @@
 
 </script>
 
-<div class="h-screen w-screen">
+<div class="h-100vh w-screen">
     <div class="relative">
         <div
             class="hero min-h-[20vh]"
@@ -59,17 +60,17 @@
         </a>
     </div>
     
-    <div class="w-full h-[calc(100vh-20vh)] flex flex-row">
-        <div class="min-w-52 flex flex-col items-center mt-4">
-            <div class="bg-base-200 rounded p-4 shadow">
-                <h1 class="text-center text-xl font-bold text-secondary mb-2">Hole Selection</h1>
-                <div class="grid grid-cols-2 gap-4">
+    <div class="w-full h-full flex flex-row">
+        <div class="min-w-52 h-[520px] flex flex-col items-center mt-4">
+            <div class="h-full bg-base-200 rounded p-4 shadow">
+                <h1 class="text-center text-xl font-bold text-secondary mb-4">Hole Selection</h1>
+                <div class="grid grid-cols-[1fr_auto_1fr] gap-1">
                     <!-- Front 9 -->
-                    <div class="flex flex-col">
+                    <div class="flex flex-col items-center">
                         <span class="text-center text-sm font-medium mb-2">Front 9</span>
                         {#each $courseStore.selectedCourse.holes.slice(0, 9) as hole, index}
                             <button 
-                                class="btn btn-sm w-14 my-0.5 text-neutral-content bg-primary hover:bg-primary-focus transition-colors"
+                                class="btn btn-sm h-[42px] w-14 my-0.5 text-neutral-content bg-primary hover:bg-primary-focus transition-colors"
                                 class:bg-error={$courseStore.selectedHole?.hole === (index + 1)}
                                 class:shadow-lg={$courseStore.selectedHole?.hole === (index + 1)}
                                 on:click={() => handleHoleSelection(hole)}>
@@ -77,12 +78,13 @@
                             </button>
                         {/each}
                     </div>
+                    <div class="divider divider-horizontal mx-1"></div>
                     <!-- Back 9 -->
-                    <div class="flex flex-col">
+                    <div class="flex flex-col items-center">
                         <span class="text-center text-sm font-medium mb-2">Back 9</span>
                         {#each $courseStore.selectedCourse.holes.slice(9, 18) as hole, index}
                             <button 
-                                class="btn btn-sm w-14 my-0.5 text-neutral-content bg-primary hover:bg-primary-focus transition-colors"
+                                class="btn btn-sm h-[42px] w-14 my-0.5 text-neutral-content bg-primary hover:bg-primary-focus transition-colors"
                                 class:bg-error={$courseStore.selectedHole?.hole === (index + 10)}
                                 class:shadow-lg={$courseStore.selectedHole?.hole === (index + 10)}
                                 on:click={() => handleHoleSelection(hole)}>
@@ -93,7 +95,7 @@
                 </div>
             </div>
         </div>
-        <div class="w-full flex flex-col p-4 bg-base-200 rounded shadow my-4">
+        <div class="w-full h-[520px] flex flex-col p-4 bg-base-200 rounded shadow my-4">
             <Map/>
             <div class="w-fit join grid grid-cols-2 mx-auto mt-4">
                 <button class="join-item btn btn-outline btn-secondary" class:btn-disabled={!$courseStore.selectedHole} on:click={handlePrevHole}>Prev hole</button>
@@ -116,31 +118,30 @@
                         </div>
                     </div>
         
-                    <div class="space-y-2">
-                        <h2 class="font-semibold text-lg mb-2">Total Yardage</h2>
-                        <div class="grid grid-cols-2 gap-2">
-                            <div class="flex items-center gap-2">
-                                <div class="w-3 h-3 rounded-full bg-black"></div>
-                                <span>Black: { $courseStore.selectedCourse.yardage.black }</span>
-                            </div>
-                            <div class="flex items-center gap-2">
-                                <div class="w-3 h-3 rounded-full bg-amber-800"></div>
-                                <span>Brown: { $courseStore.selectedCourse.yardage.brown }</span>
-                            </div>
-                            <div class="flex items-center gap-2">
-                                <div class="w-3 h-3 rounded-full bg-green-600"></div>
-                                <span>Green: { $courseStore.selectedCourse.yardage.green }</span>
-                            </div>
-                            <div class="flex items-center gap-2">
-                                <div class="w-3 h-3 rounded-full bg-white border"></div>
-                                <span>White: { $courseStore.selectedCourse.yardage.white }</span>
-                            </div>
-                            <div class="flex items-center gap-2">
-                                <div class="w-3 h-3 rounded-full bg-yellow-400"></div>
-                                <span>Yellow: { $courseStore.selectedCourse.yardage.yellow }</span>
-                            </div>
+                    <h2 class="font-semibold text-lg mb-2">Total Yardage</h2>
+                    <div class="grid grid-cols-2 gap-2 mb-4">
+                        <div class="flex items-center gap-2">
+                            <div class="w-3 h-3 rounded-full bg-black"></div>
+                            <p>Black: <span class="font-medium">{ $courseStore.selectedCourse.yardage.black }</span></p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <div class="w-3 h-3 rounded-full bg-amber-800"></div>
+                            <p>Brown: <span class="font-medium">{ $courseStore.selectedCourse.yardage.brown }</span></p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <div class="w-3 h-3 rounded-full bg-green-600"></div>
+                            <p>Green: <span class="font-medium">{ $courseStore.selectedCourse.yardage.green }</span></p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <div class="w-3 h-3 rounded-full bg-white"></div>
+                            <p>White: <span class="font-medium">{ $courseStore.selectedCourse.yardage.white }</span></p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <div class="w-3 h-3 rounded-full bg-yellow-400"></div>
+                            <p>Yellow: <span class="font-medium">{ $courseStore.selectedCourse.yardage.yellow }</span></p>
                         </div>
                     </div>
+                    <WeatherWidget latitude={$courseStore.selectedCourse.latitude} longitude={$courseStore.selectedCourse.longitude} />
                 </div>
             <!-- {/if} -->
     
@@ -160,27 +161,34 @@
                     </div>
     
                     <div class="space-y-2">
-                        <h2 class="font-semibold text-lg mb-2">Yardage</h2>
+                        <div class="flex flex-row">
+                            <h2 class="font-semibold text-lg">Yardage</h2>
+                            <div class="divider divider-horizontal mx-[0px]"></div>
+                            <h3 class="font-semibold text-lg">
+                                Handicap { $courseStore.selectedHole.index }
+                            </h3>
+                        </div>
+                        
                         <div class="grid grid-cols-2 gap-2">
                             <div class="flex items-center gap-2">
                                 <div class="w-3 h-3 rounded-full bg-black"></div>
-                                <span>Black: { $courseStore.selectedHole.yardage.black }</span>
+                                <p>Black: <span class="font-medium">{ $courseStore.selectedHole.yardage.black }</span></p>
                             </div>
                             <div class="flex items-center gap-2">
                                 <div class="w-3 h-3 rounded-full bg-amber-800"></div>
-                                <span>Brown: { $courseStore.selectedHole.yardage.brown }</span>
+                                <p>Brown: <span class="font-medium">{ $courseStore.selectedHole.yardage.brown }</span></p>
                             </div>
                             <div class="flex items-center gap-2">
                                 <div class="w-3 h-3 rounded-full bg-green-600"></div>
-                                <span>Green: { $courseStore.selectedHole.yardage.green }</span>
+                                <p>Green: <span class="font-medium">{ $courseStore.selectedHole.yardage.green }</span></p>
                             </div>
                             <div class="flex items-center gap-2">
-                                <div class="w-3 h-3 rounded-full bg-white border"></div>
-                                <span>White: { $courseStore.selectedHole.yardage.white }</span>
+                                <div class="w-3 h-3 rounded-full bg-white"></div>
+                                <p>White: <span class="font-medium">{ $courseStore.selectedHole.yardage.white }</span></p>
                             </div>
                             <div class="flex items-center gap-2">
                                 <div class="w-3 h-3 rounded-full bg-yellow-400"></div>
-                                <span>Yellow: { $courseStore.selectedHole.yardage.yellow }</span>
+                                <p>Yellow: <span class="font-medium">{ $courseStore.selectedHole.yardage.yellow }</span></p>
                             </div>
                         </div>
                     </div>

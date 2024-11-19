@@ -1,5 +1,6 @@
 <script>
     import { courseStore, selectCourse } from "../stores/courseStore";
+    import logo from "../images/logo.svg";
 
     function getCourseUrl(course) {
       return `/course/${course.name.toLowerCase().replaceAll(" ", "-")}`;
@@ -34,7 +35,11 @@
       </div>
     </div>
     <div class="navbar-center">
-      <a class="btn btn-ghost text-xl text-primary" href="/">GolfScape</a>
+      <a class="font-semibold flex flex-row items-center text-xl text-primary gap-0" href="/">
+        GolfScape
+        <img src={logo} alt="GolfScape Logo" class="w-10">
+      </a>
+      
     </div>
     <div class="navbar-end">
       

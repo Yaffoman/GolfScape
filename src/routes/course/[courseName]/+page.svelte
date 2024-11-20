@@ -70,7 +70,7 @@
             </div>
         </div>
     
-        <!-- <a class="absolute left-2 top-5 btn btn-xs sm:btn-sm md:btn-md lg:btn-lg bg-opacity-0 border-none shadow-none text-neutral-content hover:bg-opacity-[30%]" href="/">
+        <a class="absolute left-2 top-5 btn btn-xs sm:btn-sm md:btn-md bg-opacity-0 border-none shadow-none text-neutral-content hover:bg-opacity-[30%]" href="/">
             <svg
             xmlns="http://www.w3.org/2000/svg"
             class="h-6 w-6"
@@ -83,8 +83,8 @@
                 stroke-width="2"
                 d="M15 19l-7-7 7-7" />
             </svg>
-            Back to courses
-        </a> -->
+            Back to Courses
+        </a>
     </div>
            
     <div class="w-full h-full flex-row flex p-4 ">

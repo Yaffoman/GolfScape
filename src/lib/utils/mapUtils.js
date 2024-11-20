@@ -258,6 +258,7 @@ export async function flyThroughHole(hole) {
             },
             durationMillis: 4000,
         });
+        await new Promise(resolve => setTimeout(resolve, 500));
     }
 
     await flyToPoint({

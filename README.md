@@ -1,5 +1,5 @@
 ## Inspiration
-As an avid golfer I always appreciate when courses have a fly through drone tour of their course. This allows me to experience the course prior to booking and get a feel for the course design. The problem is that very few courses provide this so the Google Maps 3D API was the perfect tool to solve this issue.
+As an avid golfer I always appreciate when courses have a fly through drone tour of their course. This allows me to experience the course prior to booking and get a feel for the course design. The problem is that very few courses provide this so the Google Maps 3D API was the perfect tool to solve this issue. 
 ## What it does
 Golfscape allows golfers a quick and informative tour of golf courses prior to their time on the course. On top of just viewing the course we were able to go one step further with the API and create 3D markers for various points of interest such as the tee boxes, bunkers, water hazards, and greens with real distances. This allows for the golfer to not only see the course but begin to plan how to attack each hole before they even arrive at the course. 
 ## How we built it

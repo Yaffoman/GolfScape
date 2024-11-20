@@ -8,6 +8,5 @@
 
 </script>
 
-<Navbar>
-</Navbar>
-<slot/>
+<Navbar />
+<slot />

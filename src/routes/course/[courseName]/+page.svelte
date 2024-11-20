@@ -57,7 +57,7 @@
 
 </script>
 
-<div class="h-100vh w-screen">
+<div class="h-100% w-screen">
     <div class="relative">
         <div
             class="hero min-h-[20vh]"
@@ -70,7 +70,7 @@
             </div>
         </div>
     
-        <a class="absolute left-2 top-5 btn btn-xs sm:btn-sm md:btn-md lg:btn-lg bg-opacity-0 border-none shadow-none text-neutral-content" href="/">
+        <!-- <a class="absolute left-2 top-5 btn btn-xs sm:btn-sm md:btn-md lg:btn-lg bg-opacity-0 border-none shadow-none text-neutral-content hover:bg-opacity-[30%]" href="/">
             <svg
             xmlns="http://www.w3.org/2000/svg"
             class="h-6 w-6"
@@ -84,12 +84,12 @@
                 d="M15 19l-7-7 7-7" />
             </svg>
             Back to courses
-        </a>
+        </a> -->
     </div>
            
-    <div class="w-full h-full flex-row flex p-4">
+    <div class="w-full h-full flex-row flex p-4 ">
         <div class="min-w-52 h-[520px] hidden lg:flex flex-col items-center">
-            <div class="h-full bg-base-200 rounded p-4 shadow">
+            <div class="h-full bg-base-100 rounded p-4 shadow">
                 <h1 class="text-center text-xl font-bold text-secondary mb-4">Hole Selection</h1>
                 <div class="grid grid-cols-[1fr_auto_1fr] gap-1">
                     <!-- Front 9 -->
@@ -124,7 +124,7 @@
         </div>
         <div class="flex flex-col sm:flex-row w-full">
             <!-- Map Container -->
-            <div class="w-full sm:w-2/3 h-[520px] flex flex-col p-4 bg-base-200 rounded shadow mb-4 sm:mr-4">
+            <div class="w-full sm:w-2/3 h-[520px] flex flex-col p-4 bg-base-100 rounded shadow mb-4 sm:mr-4">
                 <Map/>
                 <div class="w-fit join grid grid-cols-2 mx-auto mt-4">
                     <button class="join-item btn btn-outline btn-secondary" 
@@ -143,7 +143,7 @@
             <!-- Right Column Container -->
             <div class="flex flex-col sm:w-1/3">
                 <!-- Collapsible Course Information Card -->
-                <div class="collapse collapse-arrow bg-base-200 rounded shadow mb-4">
+                <div class="collapse collapse-arrow bg-base-100 rounded shadow mb-4">
                     <input type="checkbox" bind:checked={isOpen} /> 
                     <div class="collapse-title p-4 flex flex-row items-center">
                         <h1 class="text-left text-2xl font-bold text-secondary">
@@ -172,7 +172,7 @@
 
                 <!-- Hole Information Card -->
                 {#if $courseStore.selectedHole}
-                    <div class="p-4 bg-base-200 rounded shadow w-full mb-4">
+                    <div class="p-4 bg-base-100 rounded shadow w-full mb-4">
                         <div class="flex flex-row items-center mb-4">
                             <h1 class="text-left text-2xl font-bold text-secondary">
                                 Hole { $courseStore.selectedHole.hole }

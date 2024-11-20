@@ -14,10 +14,10 @@
     <div class="hero-content text-neutral-content text-center lg:text-left">
         <div class="max-w-lg">
           <h1 class="mb-5 text-5xl font-bold">{course.name}</h1>
-          <p class="mb-5">
+          <p class="mb-5 text-white">
             {course.description}
           </p>
-          <a href={`/course/${course.name.toLowerCase().replaceAll(" ", '-')}`} class="btn btn-primary">Visit Course</a>
+          <a href={`/course/${course.name.toLowerCase().replaceAll(" ", '-')}`} class="btn btn-warning text-white">Visit Course</a>
           <!-- Stat list -->
         </div>
       </div>

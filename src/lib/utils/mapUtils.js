@@ -66,19 +66,16 @@ export function calculateMidpoint(lat1, lng1, lat2, lng2) {
     return {lat: toDegrees(lat3), lng: toDegrees(lon3)};
 }
 
-export async function flyToCourse(course) {
-    const store = get(courseStore);
-    const mapObject = store.mapObject;
-    if (!mapObject) return;
-
-    mapObject.flyCameraTo({
-        endCamera: {
-            center: {lat: course.latitude, lng: course.longitude, altitude: 0},
-            tilt: 67.5,
-            range: 1000,
-        },
-        durationMillis: 6000,
+function hideHoleMarkers() {
+    document.querySelectorAll('gmp-marker-3d-interactive').forEach((marker) => {
+        // remove all markers that are not interactive (holes)
+        marker.remove();
     });
+}
+
+async function addHoleMarkers(mapObject) {
+    const course = get(courseStore).selectedCourse;
+    if (!course) return;
 
     // Add markers for each hole
     if (window.google?.maps?.maps3d?.Marker3DInteractiveElement) {
@@ -110,6 +107,23 @@ export async function flyToCourse(course) {
     }
 }
 
+export async function flyToCourse(course) {
+    const store = get(courseStore);
+    const mapObject = store.mapObject;
+    if (!mapObject) return;
+
+    mapObject.flyCameraTo({
+        endCamera: {
+            center: {lat: course.latitude, lng: course.longitude, altitude: 0},
+            tilt: 67.5,
+            range: 1000,
+        },
+        durationMillis: 6000,
+    });
+
+    addHoleMarkers(mapObject);
+}
+
 export async function flyToPoint(cameraOptions) {
     const store = get(courseStore);
     const mapObject = store.mapObject;
@@ -121,7 +135,7 @@ export async function flyToPoint(cameraOptions) {
     );
 }
 
-async function buildMarker(lat, lng, altitude, tee, color) {
+async function buildMarker(lat, lng, altitude, tee, color, distance = true, label = '') {
     const Marker = window.google.maps.maps3d.Marker3DElement;
     const {PinElement} = await window.google.maps.importLibrary("marker");
 
@@ -140,7 +154,7 @@ async function buildMarker(lat, lng, altitude, tee, color) {
         glyphColor: "white",
     })
 
-    markerOptions.label = Math.round(convertMetersToYards(calculateDistance(tee.latitude, tee.longitude, lat, lng))) + " yds"
+    markerOptions.label = distance ? Math.round(convertMetersToYards(calculateDistance(tee.latitude, tee.longitude, lat, lng))) + " yds" : label
     markerOptions.position.altitude = 5;
     markerOptions.extruded = true;
     pinScaled.background = color;
@@ -169,10 +183,14 @@ export async function flyThroughHole(hole) {
             return p.poi === POI.BACK_TEE;
         })
         removeMarkers(mapObject, store.holeMarkers);
+        hideHoleMarkers();
         for (const poi of hole.poi) {
             const {latitude, longitude} = poi;
             let newMarker = null;
             switch (poi.poi) {
+                case POI.BACK_TEE:
+                    newMarker = await buildMarker(latitude, longitude, 0, tee, "#A9A9A9", false, `${hole.hole}`);
+                    break;
                 case POI.GREEN:
                     if (poi.center) {
                         newMarker = await buildMarker(latitude, longitude, 5, tee, "#008000");
@@ -209,18 +227,19 @@ export async function flyThroughHole(hole) {
             return p.poi === poi && (p.poi === POI.GREEN ? p.center : true);
         }) || {longitude: null, latitude: null};
         if (!longitude || !latitude) return;
-        path.push({longitude: longitude, latitude: latitude})
+        path.push({poi, longitude, latitude})
     });
 
-    heading = calculateHeading(
-        path[0].latitude,
-        path[0].longitude,
-        path.at(-1).latitude,
-        path.at(-1).longitude
-    );
+    const point1 = path.find((p) => p.poi === POI.BACK_TEE);
+    const point2 = path.find((p) => p.poi === POI.ONE_HUNDRED_MARKER);
+    const point3 = path.find((p) => p.poi === POI.GREEN);
+
+    console.log(point1, point2, point3)
+
+    heading = point2 ? calculateHeading(point1.latitude, point1.longitude, point2.latitude, point2.longitude) : calculateHeading(point1.latitude, point1.longitude, point3.latitude, point3.longitude);
     await flyToPoint({
         endCamera: {
-            center: {lng: path.at(0).longitude, lat: path.at(0).latitude, altitude: 50 + altitudeOffset + holeAltitude},
+            center: {lng: point1.longitude, lat: point1.latitude, altitude: 50 + altitudeOffset + holeAltitude},
             heading: heading,
             tilt: 80,
             range: 50,
@@ -228,35 +247,50 @@ export async function flyThroughHole(hole) {
         durationMillis: 4000,
     });
 
+    if (point2) {
+        heading = calculateHeading(point2.latitude, point2.longitude, point3.latitude, point3.longitude);
+        await flyToPoint({
+            endCamera: {
+                center: {lng: point2.longitude, lat: point2.latitude, altitude: 50 + altitudeOffset + holeAltitude},
+                heading: heading,
+                tilt: 67.5,
+                range: 50,
+            },
+            durationMillis: 4000,
+        });
+    }
+
     await flyToPoint({
         endCamera: {
             center: {
-                lng: path.at(-1).longitude,
-                lat: path.at(-1).latitude,
+                lng: point3.longitude,
+                lat: point3.latitude,
                 altitude: 80 + altitudeOffset + holeAltitude
             },
             heading: heading,
             tilt: 0,
             range: 50,
         },
-        durationMillis: 6500,
+        durationMillis: 4000,
     });
 
-    mapObject.flyCameraAround({
-        camera: {
-            center: {
-                lat: path.at(-1).latitude,
-                lng: path.at(-1).longitude,
-                altitude: 80 + altitudeOffset + holeAltitude,
-            },
-            range: 50,
-            tilt: 0,
-            heading: heading,
-        },
-        durationMillis: 4500,
-        rounds: 1,
-    });
+    // mapObject.flyCameraAround({
+    //     camera: {
+    //         center: {
+    //             lat: point3.latitude,
+    //             lng: point3.longitude,
+    //             altitude: 80 + altitudeOffset + holeAltitude,
+    //         },
+    //         range: 20,
+    //         tilt: 20,
+    //         heading: heading,
+    //     },
+    //     durationMillis: 4500,
+    //     rounds: 1,
+    // });
 
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+    addHoleMarkers(mapObject);
     setFlyingThroughHole(false);
 }
 

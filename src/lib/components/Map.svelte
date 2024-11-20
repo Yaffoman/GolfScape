@@ -24,4 +24,4 @@
 
 </script>
 
-<div id="map_container" class="h-full w-full"></div>
+<div id="map_container" class="h-full w-full rounded overflow-clip"></div>

@@ -9,7 +9,7 @@
 
 <div class="navbar bg-base-100">
     <div class="navbar-start">
-      <div class="dropdown">
+      <!-- <div class="dropdown">
         <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -32,7 +32,7 @@
             </li>
           {/each}
         </ul>
-      </div>
+      </div> -->
     </div>
     <div class="navbar-center">
       <a class="font-semibold flex flex-row items-center text-xl text-primary gap-0" href="/">

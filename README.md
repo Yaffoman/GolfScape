@@ -19,11 +19,11 @@ We learned to use the Google 3D Maps API and integrate it into Svelte. Since it 
 We also learned much more about the golf courses themselves and what rich data is available in the golf world.
 
 ## What's next for GolfScape
-Draw altitude gradient on map
-Optimal path planning based on course layout and par
-AI caddy tips about how to play a hole
-Mobile-optimizations
-Export video functionality for clubs to use in marketing
-Automated course import (color detection to get coordinates of features)
+- Draw altitude gradient on map
+- Optimal path planning based on course layout and par
+- AI caddy tips about how to play a hole
+- Mobile-optimizations
+- Export video functionality for clubs to use in marketing
+- Automated course import (color detection to get coordinates of features)
 
   

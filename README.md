@@ -6,7 +6,7 @@ Allows golfers a quick and informative tour of golf courses prior to their time 
 For the frontend platform we used Sveltekit
 
 ## Challenges we ran into
-Most of the challenges we ran into fell into 2 categories: API limitations and unfamiliarity with SvelteKit. This was Ethan’s first time deploying a SvelteKit app so there was a bit of a learning curve with how to organize code, manage state, and import data. These were not too hard to overcome with the help of Google and Gabe’s experience to fall back on.
+Most of the challenges we ran into fell into 2 categories: API limitations and unfamiliarity with SvelteKit. This was Ethan’s first time deploying a SvelteKit app so there was a bit of a learning curve with how to organize code, manage state, and import data. These were not too hard to overcome with the help of Google and Gabe’s experience to fall back on. 
 
 The API limitations were more of a core issue. We used most every part of the 3D Maps functionality, but we didn’t have the full control of the camera like we wanted. The flyCameraTo function was great, but didn’t have a way to customize the path to follow a curve rather than a straight line. Also, the camera tilt was heavily influenced by the altitude and range as it would fly over the course which caused some weird behaviors (zooming in and out between path points).
 

@@ -23,9 +23,14 @@
     }
 
     function handleNextHole() {
-        const curHoleIndex = $courseStore.selectedHole.hole
-        const nextHoleIndex = curHoleIndex + 1
-        flyThroughHole($courseStore.selectedCourse.holes[nextHoleIndex - 1])
+        if (!$courseStore.selectedHole || $courseStore.selectedHole.hole === 18) {
+            flyThroughHole($courseStore.selectedCourse.holes[0])
+
+        } else {
+            const curHoleIndex = $courseStore.selectedHole.hole
+            const nextHoleIndex = curHoleIndex + 1
+            flyThroughHole($courseStore.selectedCourse.holes[nextHoleIndex - 1])
+        }
     }
 
     function getTeeColor(colorKey) {
@@ -123,12 +128,12 @@
                 <Map/>
                 <div class="w-fit join grid grid-cols-2 mx-auto mt-4">
                     <button class="join-item btn btn-outline btn-secondary" 
-                            class:btn-disabled={!$courseStore.selectedHole} 
+                            class:btn-disabled={!$courseStore.selectedHole || $courseStore.selectedHole.hole === 1} 
                             on:click={handlePrevHole}>
                         Prev hole
                     </button>
                     <button class="join-item btn btn-outline btn-primary" 
-                            class:btn-disabled={!$courseStore.selectedHole} 
+                            class:btn-disabled={$courseStore.selectedHole?.hole === 18} 
                             on:click={handleNextHole}>
                         Next hole
                     </button>

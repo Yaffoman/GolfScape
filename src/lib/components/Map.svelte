@@ -13,7 +13,8 @@
             center: {lat: 37.36353, lng: -121.9286, altitude: 10000},
             tilt: 67.5,
             range: 100000000,
-            defaultLabelsDisabled: true
+            defaultLabelsDisabled: true,
+            defaultUIDisabled: true,
         });
         document.getElementById('map_container')?.append(mapObject);
         setMapObject(mapObject); 

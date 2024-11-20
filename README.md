@@ -26,3 +26,4 @@ Mobile-optimizations
 Export video functionality for clubs to use in marketing
 Automated course import (color detection to get coordinates of features)
 
+  

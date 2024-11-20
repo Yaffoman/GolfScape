@@ -289,7 +289,7 @@ export async function flyThroughHole(hole) {
     //     rounds: 1,
     // });
 
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    await new Promise((resolve) => setTimeout(resolve, 500));
     addHoleMarkers(mapObject);
     setFlyingThroughHole(false);
 }

@@ -97,9 +97,10 @@
                         <span class="text-center text-sm font-medium mb-2">Front 9</span>
                         {#each $courseStore.selectedCourse.holes.slice(0, 9) as hole, index}
                             <button 
-                                class="btn btn-sm h-[42px] w-14 my-0.5 text-neutral-content bg-primary hover:bg-primary-focus transition-colors"
+                                class="btn btn-sm h-[42px] w-14 my-0.5 !text-neutral-content bg-primary hover:bg-primary-focus transition-colors"
                                 class:!bg-error={$courseStore.selectedHole?.hole === (index + 1)}
                                 class:shadow-lg={$courseStore.selectedHole?.hole === (index + 1)}
+                                class:btn-disabled={$courseStore.flyingThroughHole}
                                 on:click={() => handleHoleSelection(hole)}>
                                 {index + 1}
                             </button>
@@ -111,9 +112,10 @@
                         <span class="text-center text-sm font-medium mb-2">Back 9</span>
                         {#each $courseStore.selectedCourse.holes.slice(9, 18) as hole, index}
                             <button 
-                                class="btn btn-sm h-[42px] w-14 my-0.5 text-neutral-content bg-primary hover:bg-primary-focus transition-colors"
+                                class="btn btn-sm h-[42px] w-14 my-0.5 !text-neutral-content bg-primary hover:bg-primary-focus transition-colors"
                                 class:!bg-error={$courseStore.selectedHole?.hole === (index + 10)}
                                 class:shadow-lg={$courseStore.selectedHole?.hole === (index + 10)}
+                                class:btn-disabled={$courseStore.flyingThroughHole}
                                 on:click={() => handleHoleSelection(hole)}>
                                 {index + 10}
                             </button>
@@ -128,12 +130,12 @@
                 <Map/>
                 <div class="w-fit join grid grid-cols-2 mx-auto mt-4">
                     <button class="join-item btn btn-outline btn-secondary" 
-                            class:btn-disabled={!$courseStore.selectedHole || $courseStore.selectedHole.hole === 1} 
+                            class:btn-disabled={!$courseStore.selectedHole || $courseStore.selectedHole.hole === 1 || $courseStore.flyingThroughHole} 
                             on:click={handlePrevHole}>
                         Prev hole
                     </button>
                     <button class="join-item btn btn-outline btn-primary" 
-                            class:btn-disabled={$courseStore.selectedHole?.hole === 18} 
+                            class:btn-disabled={$courseStore.selectedHole?.hole === 18 || $courseStore.flyingThroughHole} 
                             on:click={handleNextHole}>
                         Next hole
                     </button>
